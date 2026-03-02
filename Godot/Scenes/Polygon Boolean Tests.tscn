@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxqs6bpxyy3pm"]
+
+[ext_resource type="Script" uid="uid://b4tj6el4redpg" path="res://Scripts/BooleanTests/polygon_boolean_tests.gd" id="1_o47rd"]
+
+[node name="PolygonBooleanTests" type="Node2D" node_paths=PackedStringArray("MergeButton", "ClipButton", "IntersectButton", "ExcludeButton", "ResetButton", "PolyOne", "PolyTwo", "PolygonHolder")]
+script = ExtResource("1_o47rd")
+MergeButton = NodePath("Control/Button")
+ClipButton = NodePath("Control/Button2")
+IntersectButton = NodePath("Control/Button3")
+ExcludeButton = NodePath("Control/Button4")
+ResetButton = NodePath("Control/Button5")
+PolyOne = NodePath("Polygons/Polygon2D")
+PolyTwo = NodePath("Polygons/Polygon2D2")
+PolygonHolder = NodePath("Polygons")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Merge (Union"
+
+[node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 145.0
+offset_right = 277.0
+offset_bottom = 31.0
+text = "Clip (Difference)"
+
+[node name="Button3" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 315.0
+offset_right = 428.0
+offset_bottom = 31.0
+text = "Intersect (Common)"
+
+[node name="Button4" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 524.0
+offset_right = 656.0
+offset_bottom = 31.0
+text = "Exclude (All but common)"
+
+[node name="Button5" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 771.0
+offset_top = 1.0
+offset_right = 976.0
+offset_bottom = 32.0
+text = "RESET"
+
+[node name="Polygons" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Polygons"]
+color = Color(0.4, 0.556863, 0.580392, 0.745098)
+polygon = PackedVector2Array(471, 186, 888, 519, 1265, 510, 829, 66)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Polygons"]
+color = Color(1, 0.313726, 0.494118, 0.619608)
+polygon = PackedVector2Array(815, 165, 710, 449, 966, 780, 1458, 501, 1452, 175)

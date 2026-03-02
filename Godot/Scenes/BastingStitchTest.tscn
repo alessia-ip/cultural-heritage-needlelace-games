@@ -1,0 +1,176 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0xhvnlj5r5rx"]
+
+[ext_resource type="Script" uid="uid://du2pgyft4rr5i" path="res://Scripts/CheckpointManager.gd" id="1_73cup"]
+[ext_resource type="Script" uid="uid://ddocijyysnjt4" path="res://Scripts/TracingBasting.gd" id="1_vliw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h6ly"]
+size = Vector2(124, 202)
+
+[node name="BastingStitchTest" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(368, 216, 359, 902, 1474, 899, 1451, 210)
+closed = true
+width = 60.1
+default_color = Color(0, 0.196883, 0.515453, 1)
+
+[node name="Node2D" type="Node2D" parent="Line2D" node_paths=PackedStringArray("bastingLine")]
+script = ExtResource("1_73cup")
+bastingLine = NodePath("../../Line2D2")
+
+[node name="Area2D" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(368, 274)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D2" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(368, 468)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D2"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D3" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(367, 660)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D3"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D4" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(368, 841)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D4"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D5" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1459, 274)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D5"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D6" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1459, 468)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D6"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D7" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1458, 660)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D7"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D8" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1459, 841)
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D8"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D9" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(472, 234)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D9"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D10" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(650, 234)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D10"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D11" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(840, 234)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D11"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D12" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1007, 235)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D12"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D13" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1187, 235)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D13"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D14" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1354, 236)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D14"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D15" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(471, 893)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D15"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D16" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(649, 893)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D16"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D17" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(839, 893)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D17"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D18" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1006, 894)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D18"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D19" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1186, 894)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D19"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Area2D20" type="Area2D" parent="Line2D/Node2D"]
+position = Vector2(1353, 895)
+rotation = 1.57261
+script = ExtResource("1_vliw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/Node2D/Area2D20"]
+shape = SubResource("RectangleShape2D_1h6ly")
+
+[node name="Line2D2" type="Line2D" parent="."]
+points = PackedVector2Array(152, 56, 279, 57, 338, 163, 500, 102)
+width = 10.58
+default_color = Color(0.967288, 0.933051, 0.942795, 1)

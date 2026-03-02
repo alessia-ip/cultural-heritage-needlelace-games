@@ -1,0 +1,811 @@
+[gd_scene load_steps=36 format=3 uid="uid://bwm2x6mulmgix"]
+
+[ext_resource type="Texture2D" uid="uid://imqssrwsrrtt" path="res://Images/Stitches/Greco.png" id="1_47djk"]
+[ext_resource type="Script" uid="uid://cdgx0u8aberjj" path="res://Scripts/UiAnimation.gd" id="1_86xgc"]
+[ext_resource type="Texture2D" uid="uid://dao27crskrk4r" path="res://Images/Stitches/GrecoRedin.png" id="1_e8lgl"]
+[ext_resource type="Texture2D" uid="uid://bgsycufua7ey6" path="res://Images/Stitches/Fisso.png" id="2_4p44e"]
+[ext_resource type="Texture2D" uid="uid://c6qkiojgoyuxt" path="res://Images/Stitches/SacolaCiara.png" id="2_jly1w"]
+[ext_resource type="Texture2D" uid="uid://q1q2bd117gvk" path="res://Images/Stitches/GrecoDaDo.png" id="2_ompl7"]
+[ext_resource type="Texture2D" uid="uid://dxw8fq4nf57tj" path="res://Images/Stitches/GrecoDaTre.png" id="3_ucgbk"]
+[ext_resource type="Texture2D" uid="uid://bjsogeraiqudo" path="res://Images/Stitches/Panetti.png" id="5_ompl7"]
+[ext_resource type="Texture2D" uid="uid://cf45mv31hyc33" path="res://Images/Stitches/Rosalina.png" id="6_ucgbk"]
+[ext_resource type="Texture2D" uid="uid://ddlo82l157vl7" path="res://Images/Stitches/SbariARiga.png" id="9_ecr7e"]
+[ext_resource type="Texture2D" uid="uid://dqiapv87qca05" path="res://Images/Stitches/SbariConVotevi.png" id="10_ca33t"]
+
+[sub_resource type="Animation" id="Animation_xoiyu"]
+resource_name = "CloseUI"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1425, 0), Vector2(1923, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ca33t"]
+resource_name = "OpenUI"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1923, 0), Vector2(1425, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_86xgc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1923, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_86xgc"]
+_data = {
+&"CloseUI": SubResource("Animation_xoiyu"),
+&"OpenUI": SubResource("Animation_ca33t"),
+&"RESET": SubResource("Animation_86xgc")
+}
+
+[sub_resource type="Animation" id="Animation_4pqh0"]
+resource_name = "CloseUI"
+length = 0.100003
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 111)]
+}
+
+[sub_resource type="Animation" id="Animation_nkygs"]
+resource_name = "OpenUI"
+length = 0.100003
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 111), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_37dxu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 111)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4pqh0"]
+_data = {
+&"CloseUI": SubResource("Animation_4pqh0"),
+&"OpenUI": SubResource("Animation_nkygs"),
+&"RESET": SubResource("Animation_37dxu")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mif27"]
+bg_color = Color(0.968627, 0.2, 0.505882, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.993382, 0.562507, 0.681056, 1)
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkygs"]
+bg_color = Color(0.969657, 0.199908, 0.508922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxva5"]
+bg_color = Color(0.901961, 0.458824, 0.25098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.963855, 0.60125, 0.442403, 1)
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hd2ev"]
+bg_color = Color(0.900093, 0.45815, 0.252589, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86xgc"]
+bg_color = Color(0.937255, 0.901961, 0.541176, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.704365, 0.525407, 0, 1)
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pqh0"]
+bg_color = Color(0.936641, 0.902976, 0.541895, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_veb6y"]
+bg_color = Color(0.352941, 0.705882, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.532032, 0.911307, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4dvd"]
+bg_color = Color(0.352839, 0.704746, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7llx"]
+bg_color = Color(0.0745098, 0.596078, 0.933333, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.33896, 0.799773, 1, 1)
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37dxu"]
+bg_color = Color(0.0784314, 0.596078, 0.933333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyv2x"]
+bg_color = Color(0.466667, 0.117647, 0.807843, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.677617, 0.479179, 0.987986, 1)
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcg1m"]
+bg_color = Color(0.465123, 0.117039, 0.806908, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt4jq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.497474, 0.497474, 0.497473, 1)
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xoiyu"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tovs7"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.760297, 0.760297, 0.760297, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rk26"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="FillingPatternUi" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -1080.0
+offset_right = 2429.0
+grow_vertical = 0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -506.0
+offset_bottom = 1083.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_86xgc")
+}
+script = ExtResource("1_86xgc")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 501.0
+offset_bottom = 1087.0
+color = Color(0.552456, 0.427193, 0.307502, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+clip_contents = false
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 48.0
+offset_right = 250.0
+offset_bottom = 88.0
+grow_horizontal = 2
+text = "Stitches"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutto Di Punti" type="Control" parent="Control"]
+layout_mode = 1
+anchor_left = 0.594
+anchor_top = 0.049
+anchor_right = 0.594
+anchor_bottom = 0.049
+offset_left = -301.548
+offset_top = -2.067
+offset_right = 196.452
+offset_bottom = 911.933
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Tutto Di Punti"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.06
+anchor_right = 0.5
+anchor_bottom = -0.06
+offset_left = -220.0
+offset_top = 134.84
+offset_right = 221.0
+offset_bottom = 965.84
+grow_horizontal = 2
+
+[node name="GridContainer" type="GridContainer" parent="Control/Tutto Di Punti/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 19
+columns = 2
+
+[node name="Sacola Ciara" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Sacola Ciara"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Sacola Ciara"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Sacola Ciara"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Sacola Ciara/Control"]
+texture_repeat = 2
+texture = ExtResource("2_jly1w")
+texture_scale = Vector2(25, 25)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Fisso" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Fisso"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Fisso"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Fisso"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Fisso/Control"]
+texture_repeat = 2
+texture = ExtResource("2_4p44e")
+texture_scale = Vector2(25, 25)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Greco" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Greco"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco/Control"]
+texture_repeat = 2
+texture = ExtResource("1_47djk")
+texture_scale = Vector2(25, 25)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Greco Da Due" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Da Due"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Greco da Due"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Da Due"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Da Due/Control"]
+texture_repeat = 2
+texture = ExtResource("2_ompl7")
+texture_scale = Vector2(25, 25)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Greca da Tre" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greca da Tre"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Greco da tre"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greca da Tre"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greca da Tre/Control"]
+texture_repeat = 2
+texture = ExtResource("3_ucgbk")
+texture_scale = Vector2(25, 25)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Greco Redin" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Redin"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Greco Redin"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Redin"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Redin/Control"]
+texture_repeat = 2
+texture = ExtResource("1_e8lgl")
+texture_scale = Vector2(25, 25)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Panetti" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Panetti"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Panetti"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Panetti"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Panetti/Control"]
+texture_repeat = 2
+texture = ExtResource("5_ompl7")
+texture_scale = Vector2(50, 50)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Rosalina" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Rosalina"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Rosalina"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Rosalina"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/Rosalina/Control"]
+texture_repeat = 2
+texture = ExtResource("6_ucgbk")
+texture_offset = Vector2(0, -20.29)
+texture_scale = Vector2(50, 50)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="SbariARiga" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariARiga"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Sbari a Riga"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariARiga"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariARiga/Control"]
+texture_repeat = 2
+texture = ExtResource("9_ecr7e")
+texture_offset = Vector2(0, 1.72)
+texture_scale = Vector2(58.23, 58.23)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="SbariConVotevi" type="Button" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariConVotevi"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+text = "Sbari con Votevi"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariConVotevi"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.44
+anchor_right = 0.87
+anchor_bottom = 0.74
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariConVotevi/Control"]
+texture_repeat = 2
+texture = ExtResource("10_ca33t")
+texture_offset = Vector2(0, -20.29)
+texture_scale = Vector2(50, 50)
+polygon = PackedVector2Array(-84, -31, -85, 27, 86, 28, 87, -32)
+
+[node name="Close" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 997.0
+offset_right = 449.0
+offset_bottom = 1062.0
+text = "Close"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+clip_contents = false
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -249.984
+offset_top = 777.0
+offset_right = 250.016
+offset_bottom = 817.0
+grow_horizontal = 2
+text = "Direction
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="Control"]
+layout_mode = 0
+offset_left = 66.016
+offset_top = 809.0
+offset_right = 438.016
+offset_bottom = 904.0
+max_value = 360.0
+step = 5.0
+rounded = true
+tick_count = 5
+
+[node name="Control2" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 111.0
+offset_right = 40.0
+offset_bottom = 151.0
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control2"]
+libraries = {
+&"": SubResource("AnimationLibrary_4pqh0")
+}
+script = ExtResource("1_86xgc")
+
+[node name="ColorRect" type="ColorRect" parent="Control2"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 971.0
+offset_right = 1171.0
+offset_bottom = 1086.0
+color = Color(0.552941, 0.427451, 0.309804, 1)
+
+[node name="GridContainer" type="GridContainer" parent="Control2"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 988.0
+offset_right = 1097.0
+offset_bottom = 1091.0
+mouse_filter = 2
+theme_override_constants/h_separation = 23
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Red" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_mif27")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nkygs")
+
+[node name="Orange" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_oxva5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hd2ev")
+
+[node name="Yellow" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_86xgc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4pqh0")
+
+[node name="Green" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_veb6y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c4dvd")
+
+[node name="Blue" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_x7llx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_37dxu")
+
+[node name="Purple" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_dyv2x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jcg1m")
+
+[node name="White" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_gt4jq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xoiyu")
+
+[node name="Black" type="Button" parent="Control2/GridContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_tovs7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1rk26")

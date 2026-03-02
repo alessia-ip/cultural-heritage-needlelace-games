@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://ppikuyesyxdy"]
+
+[ext_resource type="Script" uid="uid://bwc0pe605g13h" path="res://Scripts/MouseHandler.gd" id="1_662v8"]
+[ext_resource type="Texture2D" uid="uid://brpnym6ojb46n" path="res://Images/icons.png" id="1_lociv"]
+
+[node name="MouseSetup" type="Node2D" node_paths=PackedStringArray("OpenHand", "ClosedHand", "PointingHand", "Pin", "Pencil", "Eraser", "ThumbsUp", "Needle", "MagnifyingGlass", "No")]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_662v8")
+OpenHand = NodePath("OpenHand")
+ClosedHand = NodePath("ClosedHand")
+PointingHand = NodePath("PointingHand")
+Pin = NodePath("Sprite2D")
+Pencil = NodePath("Pencil")
+Eraser = NodePath("Eraser")
+ThumbsUp = NodePath("ThumbsUp")
+Needle = NodePath("Needle")
+MagnifyingGlass = NodePath("MagnifyingGlass")
+No = NodePath("No")
+
+[node name="OpenHand" type="Sprite2D" parent="."]
+modulate = Color(0.44, 1, 0.654667, 1)
+position = Vector2(5, 3)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(949.535, 133.544, 94.4402, 95.6471)
+
+[node name="ClosedHand" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.44, 1, 0.654667, 1)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(964.118, 588.668, 73.1835, 73.1835)
+
+[node name="PointingHand" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.44, 1, 0.654667, 1)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(1088.77, 121.868, 86.4165, 94.3629)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(63, 43)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(1525.08, 132.068, 146.87, 115.333)
+
+[node name="Pencil" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(47, -53)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(306.323, 335.92, 110.94, 125.343)
+
+[node name="Eraser" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(25, -32)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(458.966, 377.654, 82.6375, 91.4663)
+
+[node name="ThumbsUp" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.44, 1, 0.654667, 1)
+position = Vector2(-3, -4)
+scale = Vector2(0.654639, 0.654639)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(1941.36, 91.951, 97.4142, 117.061)
+
+[node name="Needle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(38, 43)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(126.883, 388.459, 101.371, 103.375)
+
+[node name="MagnifyingGlass" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(10, 17)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(627.853, 359.755, 95.9973, 105.719)
+
+[node name="No" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_lociv")
+region_enabled = true
+region_rect = Rect2(1780.58, 132.73, 67.2573, 76.9256)

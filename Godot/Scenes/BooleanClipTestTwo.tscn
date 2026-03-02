@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsgoyq4iwum47"]
+
+[ext_resource type="Script" uid="uid://dnf67gbmh6204" path="res://Scripts/BooleanTests/boolean_clip_test_two_v2.gd" id="1_aqx8c"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aqx8c"]
+
+[node name="BooleanClipTestTwo" type="Node2D" node_paths=PackedStringArray("runButt")]
+script = ExtResource("1_aqx8c")
+runButt = NodePath("Control/Button")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("CanvasItemMaterial_aqx8c")
+color = Color(0.827, 0.413, 0.732, 0.68)
+polygon = PackedVector2Array(468, 171, 274, 381, 400, 701, 920, 605, 996, 248, 771, 97)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color(0.567, 0.381, 0.296, 0.659)
+polygon = PackedVector2Array(688, 411, 614, 720, 829, 803, 1250, 649, 1203, 464, 913, 380)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+color = Color(0.313726, 0.521569, 0.521569, 0.654902)
+polygon = PackedVector2Array(991, 71, 838, 253, 805, 492, 1046, 652, 1267, 301, 1136, 58)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Run"

@@ -1,0 +1,358 @@
+[gd_scene load_steps=19 format=3 uid="uid://cwk2agusybs7b"]
+
+[ext_resource type="Script" uid="uid://dxkhgf2eibxui" path="res://Scripts/SetUpLaceProject.gd" id="1_ecjfo"]
+[ext_resource type="Texture2D" uid="uid://dewy7mnve4i30" path="res://Images/ArtPlaceholder.png" id="2_nhrrm"]
+[ext_resource type="Script" uid="uid://cnwvvhmdu0t8r" path="res://Scripts/SpriteLayerOrganizer.gd" id="2_qpll7"]
+[ext_resource type="Script" uid="uid://cn81iwrpikvla" path="res://Scripts/Area2DHoverUITrigger.gd" id="3_1gbv5"]
+[ext_resource type="Script" uid="uid://d2m7isog0m1o" path="res://Scripts/HandFollowCursor.gd" id="4_i45vg"]
+[ext_resource type="Texture2D" uid="uid://b0c7s5dk7cg41" path="res://Images/LaceSprites.png" id="4_wp2j3"]
+[ext_resource type="Texture2D" uid="uid://lvu2e35v6tci" path="res://Images/UiIcons.png" id="6_5exjf"]
+[ext_resource type="Script" uid="uid://3ivyrd8wofey" path="res://Scenes/back_button.gd" id="8_bo3l5"]
+[ext_resource type="Script" uid="uid://bxydjki7nl1ab" path="res://Scripts/ui_info_manager.gd" id="8_vo7dm"]
+[ext_resource type="Theme" uid="uid://crjyy8uj1a4jv" path="res://MainTextTheme.theme" id="9_jtokd"]
+[ext_resource type="Script" uid="uid://df0b6allqb7c7" path="res://Scripts/camera_manager.gd" id="10_1feqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrjb3"]
+size = Vector2(193.9, 57.4037)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tafx2"]
+size = Vector2(584.348, 179.058)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1clp"]
+size = Vector2(297, 605)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2gjp"]
+atlas = ExtResource("6_5exjf")
+region = Rect2(1251.8, 643.655, 438.491, 103.643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6he4"]
+atlas = ExtResource("6_5exjf")
+region = Rect2(1284.63, 886.736, 127.294, 66.4547)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej034"]
+atlas = ExtResource("6_5exjf")
+region = Rect2(1467.67, 885.57, 124.854, 67.4615)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_em7od"]
+atlas = ExtResource("6_5exjf")
+region = Rect2(167.532, 183.239, 273.06, 165.431)
+
+[node name="SetUpLaceProject" type="Node"]
+script = ExtResource("1_ecjfo")
+
+[node name="Camera Manager" type="Node" parent="." node_paths=PackedStringArray("SceneManager", "MainSceneCamera", "DrawerCamera", "TransitionCamera")]
+script = ExtResource("10_1feqy")
+SceneManager = NodePath("..")
+MainSceneCamera = NodePath("../MainCamera")
+DrawerCamera = NodePath("../Sprites/PillowFull/DrawerCamera")
+TransitionCamera = NodePath("../MovingCamera")
+
+[node name="MainCamera" type="Camera2D" parent="."]
+position = Vector2(962, 539)
+
+[node name="Sprites" type="Node2D" parent="." node_paths=PackedStringArray("SpriteTopLevelOrg", "MoveableFabric", "MoveablePillow")]
+position = Vector2(-3, 9)
+script = ExtResource("2_qpll7")
+SpriteTopLevelOrg = NodePath(".")
+MoveableFabric = NodePath("FabricFull/Area2D")
+MoveablePillow = NodePath("PillowFull/Area2D")
+
+[node name="LeftLeg" type="Sprite2D" parent="Sprites"]
+position = Vector2(732, 946.835)
+rotation = -0.00409114
+texture = ExtResource("2_nhrrm")
+region_enabled = true
+region_rect = Rect2(1085.88, 836.956, 367.915, 701.921)
+
+[node name="RightLeg" type="Sprite2D" parent="Sprites"]
+position = Vector2(1141, 950)
+rotation = -0.00409114
+texture = ExtResource("2_nhrrm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1085.88, 836.956, 367.915, 701.921)
+
+[node name="Table" type="Sprite2D" parent="Sprites"]
+position = Vector2(981, 288)
+scale = Vector2(10, 11.94)
+texture = ExtResource("2_nhrrm")
+region_enabled = true
+region_rect = Rect2(517.51, 407.591, 215.324, 63.3587)
+
+[node name="Area2D" type="Area2D" parent="Sprites/Table"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/Table/Area2D"]
+position = Vector2(-1.8, 2.84757)
+shape = SubResource("RectangleShape2D_nrjb3")
+
+[node name="PillowFull" type="Node2D" parent="Sprites"]
+position = Vector2(441, 409)
+
+[node name="PillowDrawer" type="Sprite2D" parent="Sprites/PillowFull"]
+position = Vector2(245, -8)
+scale = Vector2(1.15, 1.91)
+texture = ExtResource("2_nhrrm")
+region_enabled = true
+region_rect = Rect2(890.171, 230.85, 325.529, 171.242)
+
+[node name="Pillow" type="Sprite2D" parent="Sprites/PillowFull"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("2_nhrrm")
+region_enabled = true
+region_rect = Rect2(104.838, 101.768, 739.222, 411.997)
+
+[node name="DrawerCamera" type="Camera2D" parent="Sprites/PillowFull"]
+position = Vector2(505.16, 0)
+zoom = Vector2(3.23, 3.23)
+
+[node name="Area2D" type="Area2D" parent="Sprites/PillowFull" node_paths=PackedStringArray("StateManager", "LocalInspector", "ParentToMove")]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(1.15, 1.91)
+script = ExtResource("3_1gbv5")
+StateManager = NodePath("../../..")
+LocalInspector = NodePath("../Control")
+IsPickupable = true
+AreaName = "Pillow Area"
+ParentToMove = NodePath("..")
+LeftPrompt = "Pick up"
+RightPrompt = "Open the drawer"
+NameString = "[i]Cussinello[/i]"
+InfoString = "A cushion used to support the lacework on your lap."
+activeInMain = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/PillowFull/Area2D"]
+position = Vector2(16.5218, 0.52356)
+shape = SubResource("RectangleShape2D_tafx2")
+
+[node name="Control" type="Control" parent="Sprites/PillowFull"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprites/PillowFull/Control"]
+layout_mode = 0
+offset_left = -293.0
+offset_top = -147.0
+offset_right = -39.0
+offset_bottom = -124.0
+text = "Testing some text"
+
+[node name="Dowel" type="Sprite2D" parent="Sprites"]
+position = Vector2(437, 98)
+texture = ExtResource("2_nhrrm")
+region_enabled = true
+region_rect = Rect2(570.07, 655.129, 588.325, 142.419)
+
+[node name="FabricFull" type="Node2D" parent="Sprites"]
+position = Vector2(1738, 341)
+
+[node name="Fabric" type="Sprite2D" parent="Sprites/FabricFull"]
+texture = ExtResource("2_nhrrm")
+region_enabled = true
+region_rect = Rect2(112.668, 560.846, 352.656, 615.453)
+
+[node name="FabricDraped" type="Sprite2D" parent="Sprites/FabricFull"]
+
+[node name="Area2D" type="Area2D" parent="Sprites/FabricFull" node_paths=PackedStringArray("StateManager", "LocalInspector", "ParentToMove")]
+script = ExtResource("3_1gbv5")
+StateManager = NodePath("../../..")
+LocalInspector = NodePath("../Control")
+IsPickupable = true
+AreaName = "Fabric Area"
+ParentToMove = NodePath("..")
+LeftPrompt = "Pick up"
+activeInMain = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/FabricFull/Area2D"]
+position = Vector2(-9.5, -6.5)
+shape = SubResource("RectangleShape2D_i1clp")
+
+[node name="Control" type="Control" parent="Sprites/FabricFull"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -133.0
+offset_top = -161.0
+offset_right = -93.0
+offset_bottom = -121.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprites/FabricFull/Control"]
+layout_mode = 0
+offset_right = 87.0
+offset_bottom = 24.0
+bbcode_enabled = true
+text = "[color=black]Fabric"
+
+[node name="Thread" type="Sprite2D" parent="Sprites"]
+position = Vector2(1174, 57)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("2_nhrrm")
+region_enabled = true
+region_rect = Rect2(1924.74, 351.641, 257.71, 150.896)
+
+[node name="Scissors" type="Sprite2D" parent="Sprites"]
+position = Vector2(987, 126)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("4_wp2j3")
+region_enabled = true
+region_rect = Rect2(1599.26, 26.7426, 278.056, 264.492)
+
+[node name="Needle" type="Sprite2D" parent="Sprites"]
+position = Vector2(1035, 269)
+rotation = 0.244346
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("4_wp2j3")
+region_enabled = true
+region_rect = Rect2(1972.75, 70.8647, 192.122, 99.8598)
+
+[node name="Pattern" type="Sprite2D" parent="Sprites"]
+position = Vector2(1323, 330)
+texture = ExtResource("4_wp2j3")
+region_enabled = true
+region_rect = Rect2(1216.04, 502.537, 279.751, 284.838)
+
+[node name="Hand" type="Node2D" parent="."]
+position = Vector2(1368, 529)
+script = ExtResource("4_i45vg")
+
+[node name="Hand" type="Sprite2D" parent="Hand"]
+position = Vector2(10, 46)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("4_wp2j3")
+region_enabled = true
+region_rect = Rect2(2001.22, 649.634, 251.136, 267.081)
+
+[node name="Ui Info Manager" type="Control" parent="." node_paths=PackedStringArray("InfoPillow", "InfoFabric", "PromptsGen", "ItemInfoGen", "TextRectR", "TextRectL", "RightPrompt")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1368.0
+offset_top = 529.0
+offset_right = 1408.0
+offset_bottom = 569.0
+script = ExtResource("8_vo7dm")
+InfoPillow = NodePath("../Sprites/PillowFull/Area2D")
+InfoFabric = NodePath("../Sprites/FabricFull/Area2D")
+PromptsGen = NodePath("Ui Prompts Over Hand")
+ItemInfoGen = NodePath("UI Item Information Over Hand")
+TextRectR = NodePath("Ui Prompts Over Hand/Right UI Prompts/Right Prompt Text")
+TextRectL = NodePath("Ui Prompts Over Hand/Left UI Prompts/Left Prompt Text")
+RightPrompt = NodePath("Ui Prompts Over Hand/Right UI Prompts")
+
+[node name="Ui Prompts Over Hand" type="Control" parent="Ui Info Manager"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1368.0
+offset_top = -529.0
+offset_right = -1328.0
+offset_bottom = -489.0
+
+[node name="Right UI Prompts" type="Control" parent="Ui Info Manager/Ui Prompts Over Hand"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text Rect Right" type="TextureRect" parent="Ui Info Manager/Ui Prompts Over Hand/Right UI Prompts"]
+layout_mode = 0
+offset_left = 1357.0
+offset_top = 816.0
+offset_right = 1848.0
+offset_bottom = 919.0
+texture = SubResource("AtlasTexture_s2gjp")
+stretch_mode = 5
+
+[node name="RMB Icon" type="TextureRect" parent="Ui Info Manager/Ui Prompts Over Hand/Right UI Prompts"]
+layout_mode = 0
+offset_left = 1756.0
+offset_top = 887.0
+offset_right = 1883.0
+offset_bottom = 953.0
+texture = SubResource("AtlasTexture_n6he4")
+
+[node name="Right Prompt Text" type="RichTextLabel" parent="Ui Info Manager/Ui Prompts Over Hand/Right UI Prompts"]
+layout_mode = 0
+offset_left = 1411.0
+offset_top = 833.0
+offset_right = 1799.0
+offset_bottom = 894.0
+theme = ExtResource("9_jtokd")
+bbcode_enabled = true
+text = "[center]Testing the text here[/center]"
+
+[node name="Left UI Prompts" type="Control" parent="Ui Info Manager/Ui Prompts Over Hand"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text Rect Left" type="TextureRect" parent="Ui Info Manager/Ui Prompts Over Hand/Left UI Prompts"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 816.0
+offset_right = 562.0
+offset_bottom = 919.0
+texture = SubResource("AtlasTexture_s2gjp")
+stretch_mode = 5
+
+[node name="LMB Icon" type="TextureRect" parent="Ui Info Manager/Ui Prompts Over Hand/Left UI Prompts"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 890.0
+offset_right = 175.0
+offset_bottom = 957.0
+texture = SubResource("AtlasTexture_ej034")
+
+[node name="Left Prompt Text" type="RichTextLabel" parent="Ui Info Manager/Ui Prompts Over Hand/Left UI Prompts"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 833.0
+offset_right = 510.0
+offset_bottom = 897.0
+theme = ExtResource("9_jtokd")
+bbcode_enabled = true
+text = "[center]Testing the text here[/center]"
+
+[node name="UI Item Information Over Hand" type="Control" parent="Ui Info Manager"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1368.0
+offset_top = -529.0
+offset_right = -1328.0
+offset_bottom = -489.0
+
+[node name="InfoText" type="RichTextLabel" parent="Ui Info Manager/UI Item Information Over Hand"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("9_jtokd")
+bbcode_enabled = true
+
+[node name="ItemNameText" type="RichTextLabel" parent="Ui Info Manager/UI Item Information Over Hand"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 6.0
+offset_right = 1089.0
+offset_bottom = 70.0
+theme = ExtResource("9_jtokd")
+bbcode_enabled = true
+text = "[center]ITEM NAME[/center]"
+
+[node name="MovingCamera" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="MovingCamera"]
+
+[node name="UI Under Hand" type="Control" parent="MovingCamera/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackButton" type="TextureButton" parent="MovingCamera/CanvasLayer/UI Under Hand" node_paths=PackedStringArray("SceneManager")]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 985.0
+offset_right = 324.0
+offset_bottom = 1241.0
+scale = Vector2(0.29, 0.29)
+texture_normal = SubResource("AtlasTexture_em7od")
+stretch_mode = 3
+script = ExtResource("8_bo3l5")
+SceneManager = NodePath("../../../..")

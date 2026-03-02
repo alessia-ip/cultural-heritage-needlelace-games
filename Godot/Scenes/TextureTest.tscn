@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://qwomsxct4ogx"]
+
+[ext_resource type="Script" uid="uid://bo0r5ir11mama" path="res://Scripts/textureTest.gd" id="1_04a0b"]
+
+[node name="TextureTest" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.564706, 0, 0.305882, 1)
+polygon = PackedVector2Array(706, 333, 380, 583, 564, 717, 1138, 533)
+script = ExtResource("1_04a0b")

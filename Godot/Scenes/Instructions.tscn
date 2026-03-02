@@ -1,0 +1,1248 @@
+[gd_scene load_steps=20 format=3 uid="uid://cplvuokpbsr7o"]
+
+[ext_resource type="Texture2D" uid="uid://brpnym6ojb46n" path="res://Images/icons.png" id="1_lf2ic"]
+[ext_resource type="FontFile" uid="uid://dax7l3cqfmi5o" path="res://Fonts/Inknut Antiqua/InknutAntiqua-Black.ttf" id="1_oscdv"]
+[ext_resource type="FontFile" uid="uid://bs3dsfsly4ju2" path="res://Fonts/Inknut Antiqua/InknutAntiqua-Bold.ttf" id="2_vs51u"]
+[ext_resource type="FontFile" uid="uid://5lyxva8r65ay" path="res://Fonts/Inknut Antiqua/InknutAntiqua-Regular.ttf" id="3_8lqe2"]
+[ext_resource type="Script" uid="uid://d2r314sm0de0y" path="res://Scripts/UICloser.gd" id="4_1232k"]
+[ext_resource type="Theme" uid="uid://crjyy8uj1a4jv" path="res://MainTextTheme.theme" id="5_mq808"]
+[ext_resource type="Texture2D" uid="uid://dh0kub88jcg4" path="res://Images/InstructionsImages/Instructions5.png" id="7_8q1r4"]
+[ext_resource type="Texture2D" uid="uid://cmeouu7ufy0ow" path="res://Images/InstructionsImages/Instructions13.png" id="7_h8uks"]
+[ext_resource type="Texture2D" uid="uid://cebmvxcaohjxc" path="res://Images/InstructionsImages/Instructions2.png" id="8_yfgou"]
+[ext_resource type="Texture2D" uid="uid://ckpavchjs8bes" path="res://Images/InstructionsImages/Instructions10.png" id="9_yfgou"]
+[ext_resource type="Texture2D" uid="uid://dfd0mkx41llj8" path="res://Images/InstructionsImages/Instructions8.png" id="10_5pc8f"]
+[ext_resource type="Texture2D" uid="uid://cg651d5phwho7" path="res://Images/InstructionsImages/Instructions7.png" id="11_igotk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vs51u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8lqe2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="Theme" id="Theme_mq808"]
+default_font = ExtResource("1_oscdv")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/selection_color = Color(0.1, 0.1, 1, 0.8)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/shadow_outline_size = 1
+RichTextLabel/constants/table_h_separation = 3
+RichTextLabel/constants/table_v_separation = 3
+RichTextLabel/constants/text_highlight_h_padding = 3
+RichTextLabel/constants/text_highlight_v_padding = 3
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/bold_italics_font_size = 16
+RichTextLabel/font_sizes/italics_font_size = 16
+RichTextLabel/font_sizes/mono_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 26
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_vs51u")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_8lqe2")
+
+[sub_resource type="Theme" id="Theme_oscdv"]
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/bold_font_size = 25
+RichTextLabel/font_sizes/normal_font_size = 25
+RichTextLabel/fonts/bold_font = ExtResource("2_vs51u")
+RichTextLabel/fonts/normal_font = ExtResource("3_8lqe2")
+
+[sub_resource type="Animation" id="Animation_mq808"]
+resource_name = "ArrowAnimation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow/Arrow Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 0.433333, 0.466667, 0.603116, 0.669297),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -62.0211), Vector2(0, -95.881), Vector2(0, -95.881), Vector2(0, -49.691), Vector2(0, -62.0211)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arrow/Arrow Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.133333, 0.2, 0.4, 0.445581, 0.469192, 0.5, 0.60614, 0.654938),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.6, 0.6), Vector2(0.6, 0.6), Vector2(0.6, 0.7), Vector2(0.6, 0.6), Vector2(0.6, 0.6), Vector2(0.6, 0.6), Vector2(0.6, 0.4), Vector2(0.6, 0.6)]
+}
+
+[sub_resource type="Animation" id="Animation_1232k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow/Arrow Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -62.0211)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arrow/Arrow Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1232k"]
+_data = {
+&"ArrowAnimation": SubResource("Animation_mq808"),
+&"RESET": SubResource("Animation_1232k")
+}
+
+[node name="Instructions" type="Node2D"]
+
+[node name="Stage Seven" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1917.0
+offset_bottom = 1082.0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Stage Seven"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1124.99
+color = Color(0, 0.766667, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stage Seven"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -703.0
+offset_top = -505.0
+offset_right = 703.0
+offset_bottom = 505.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894614, 0.859374, 0.868286, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Seven/ColorRect2"]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 53.0
+offset_right = 784.0
+offset_bottom = 124.0
+theme = SubResource("Theme_mq808")
+bbcode_enabled = true
+text = "[center]Step Seven: Finishing[/center]"
+
+[node name="Stage Four" type="RichTextLabel" parent="Stage Seven"]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 85.0
+offset_right = 1618.0
+offset_bottom = 736.0
+theme = SubResource("Theme_oscdv")
+bbcode_enabled = true
+text = "Your lace is nearly done! Now it's just a matter of removing it from your pattern, and tidying it up. 
+
+Use the [b]left mouse button[/b] [img=90]res://Images/LMB.png[/img] to  remove the safety pins and to cut the thread holding the piece in place."
+scroll_active = false
+
+[node name="Sprites" type="Node2D" parent="Stage Seven"]
+
+[node name="Collecting" type="Sprite2D" parent="Stage Seven/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(378.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(103.328, 580.495, 71.989, 67.1564)
+
+[node name="Drawing" type="Sprite2D" parent="Stage Seven/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(562.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(274.376, 580.495, 76.6654, 67.1564)
+
+[node name="Basting" type="Sprite2D" parent="Stage Seven/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(746.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(189.817, 580.495, 73.17, 67.1564)
+
+[node name="Stitching" type="Sprite2D" parent="Stage Seven/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(933, 973)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Pinning" type="Sprite2D" parent="Stage Seven/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(1107, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(366.992, 581.987, 66.905, 65.6646)
+
+[node name="Stitching2" type="Sprite2D" parent="Stage Seven/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(1280.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Finishing" type="Sprite2D" parent="Stage Seven/Sprites"]
+position = Vector2(1469.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(535.953, 580.495, 60.767, 67.1564)
+
+[node name="Arrow" type="Node2D" parent="Stage Seven/Sprites/Finishing"]
+
+[node name="Arrow Animator" type="AnimationPlayer" parent="Stage Seven/Sprites/Finishing/Arrow"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1232k")
+}
+autoplay = "ArrowAnimation"
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Stage Seven/Sprites/Finishing/Arrow"]
+position = Vector2(0, -62.0211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(2109.6, 135.065, 42.2651, 44.6025)
+
+[node name="Button" type="Button" parent="Stage Seven" node_paths=PackedStringArray("parent", "InstructionParent")]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 732.0
+offset_right = 1480.0
+offset_bottom = 821.0
+script = ExtResource("4_1232k")
+parent = NodePath("..")
+InstructionParent = NodePath("../..")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Seven/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -32.5
+offset_right = 177.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("5_mq808")
+bbcode_enabled = true
+text = "[center]Got it! Let's start!"
+
+[node name="Stage Six" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1917.0
+offset_bottom = 1082.0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Stage Six"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1124.99
+color = Color(0, 0.766667, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stage Six"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -703.0
+offset_top = -505.0
+offset_right = 703.0
+offset_bottom = 505.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894614, 0.859374, 0.868286, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Six/ColorRect2"]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 53.0
+offset_right = 784.0
+offset_bottom = 124.0
+theme = SubResource("Theme_mq808")
+bbcode_enabled = true
+text = "[center]Step Six: Needle-lace[/center]"
+
+[node name="Stage Four" type="RichTextLabel" parent="Stage Six"]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 85.0
+offset_right = 1618.0
+offset_bottom = 736.0
+theme = SubResource("Theme_oscdv")
+bbcode_enabled = true
+text = "Now on the cussinello, your lace project is now all ready to work on. 
+
+Use the [b]left mouse button[/b] [img=90]res://Images/LMB.png[/img] to select the area of lace you want to fill, then choose the color and stitch to fill each segment with. "
+scroll_active = false
+
+[node name="Sprites" type="Node2D" parent="Stage Six"]
+
+[node name="Collecting" type="Sprite2D" parent="Stage Six/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(378.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(103.328, 580.495, 71.989, 67.1564)
+
+[node name="Drawing" type="Sprite2D" parent="Stage Six/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(562.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(274.376, 580.495, 76.6654, 67.1564)
+
+[node name="Basting" type="Sprite2D" parent="Stage Six/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(746.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(189.817, 580.495, 73.17, 67.1564)
+
+[node name="Stitching" type="Sprite2D" parent="Stage Six/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(933, 973)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Pinning" type="Sprite2D" parent="Stage Six/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(1107, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(366.992, 581.987, 66.905, 65.6646)
+
+[node name="Stitching2" type="Sprite2D" parent="Stage Six/Sprites"]
+position = Vector2(1280.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Arrow" type="Node2D" parent="Stage Six/Sprites/Stitching2"]
+
+[node name="Arrow Animator" type="AnimationPlayer" parent="Stage Six/Sprites/Stitching2/Arrow"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1232k")
+}
+autoplay = "ArrowAnimation"
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Stage Six/Sprites/Stitching2/Arrow"]
+position = Vector2(0, -62.0211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(2109.6, 135.065, 42.2651, 44.6025)
+
+[node name="Finishing" type="Sprite2D" parent="Stage Six/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1469.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(535.953, 580.495, 60.767, 67.1564)
+
+[node name="Button" type="Button" parent="Stage Six" node_paths=PackedStringArray("parent", "InstructionParent")]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 732.0
+offset_right = 1480.0
+offset_bottom = 821.0
+script = ExtResource("4_1232k")
+parent = NodePath("..")
+InstructionParent = NodePath("../..")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Six/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -32.5
+offset_right = 177.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("5_mq808")
+bbcode_enabled = true
+text = "[center]Got it! Let's start!"
+
+[node name="Instructions5" type="Sprite2D" parent="Stage Six"]
+position = Vector2(674, 454)
+scale = Vector2(0.473765, 0.473765)
+texture = ExtResource("7_8q1r4")
+region_enabled = true
+region_rect = Rect2(363.684, 227.332, 1418.36, 972.851)
+
+[node name="Stage Five" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1917.0
+offset_bottom = 1082.0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Stage Five"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1124.99
+color = Color(0, 0.766667, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stage Five"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -703.0
+offset_top = -505.0
+offset_right = 703.0
+offset_bottom = 505.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894614, 0.859374, 0.868286, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Five/ColorRect2"]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 53.0
+offset_right = 784.0
+offset_bottom = 124.0
+theme = SubResource("Theme_mq808")
+bbcode_enabled = true
+text = "[center]Step Five: Pinning[/center]"
+
+[node name="Stage Four" type="RichTextLabel" parent="Stage Five"]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 85.0
+offset_right = 1618.0
+offset_bottom = 736.0
+theme = SubResource("Theme_oscdv")
+bbcode_enabled = true
+text = "Excellent work! Now your project needs to be secured to the cussinello and tombolo for the right tension to work on. 
+
+Click the [b]left mouse button[/b] [img=90]res://Images/LMB.png[/img] to safety pin the edges of your fabric to your cussinello."
+scroll_active = false
+
+[node name="Sprites" type="Node2D" parent="Stage Five"]
+
+[node name="Collecting" type="Sprite2D" parent="Stage Five/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(378.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(103.328, 580.495, 71.989, 67.1564)
+
+[node name="Drawing" type="Sprite2D" parent="Stage Five/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(562.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(274.376, 580.495, 76.6654, 67.1564)
+
+[node name="Basting" type="Sprite2D" parent="Stage Five/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(746.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(189.817, 580.495, 73.17, 67.1564)
+
+[node name="Stitching" type="Sprite2D" parent="Stage Five/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(933, 973)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Pinning" type="Sprite2D" parent="Stage Five/Sprites"]
+position = Vector2(1107, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(366.992, 581.987, 66.905, 65.6646)
+
+[node name="Arrow" type="Node2D" parent="Stage Five/Sprites/Pinning"]
+
+[node name="Arrow Animator" type="AnimationPlayer" parent="Stage Five/Sprites/Pinning/Arrow"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1232k")
+}
+autoplay = "ArrowAnimation"
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Stage Five/Sprites/Pinning/Arrow"]
+position = Vector2(0, -62.0211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(2109.6, 135.065, 42.2651, 44.6025)
+
+[node name="Stitching2" type="Sprite2D" parent="Stage Five/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1280.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Finishing" type="Sprite2D" parent="Stage Five/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1469.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(535.953, 580.495, 60.767, 67.1564)
+
+[node name="Button" type="Button" parent="Stage Five" node_paths=PackedStringArray("parent", "InstructionParent")]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 732.0
+offset_right = 1480.0
+offset_bottom = 821.0
+script = ExtResource("4_1232k")
+parent = NodePath("..")
+InstructionParent = NodePath("../..")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Five/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -32.5
+offset_right = 177.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("5_mq808")
+bbcode_enabled = true
+text = "[center]Got it! Let's start!"
+
+[node name="Instructions7" type="Sprite2D" parent="Stage Five"]
+position = Vector2(704.75, 473.649)
+scale = Vector2(1.13561, 1.13561)
+texture = ExtResource("11_igotk")
+region_enabled = true
+region_rect = Rect2(755.408, 317.851, 483.381, 511.179)
+
+[node name="Stage Four" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1917.0
+offset_bottom = 1082.0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Stage Four"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1124.99
+color = Color(0, 0.766667, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stage Four"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -703.0
+offset_top = -505.0
+offset_right = 703.0
+offset_bottom = 505.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894614, 0.859374, 0.868286, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Four/ColorRect2"]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 53.0
+offset_right = 784.0
+offset_bottom = 124.0
+theme = SubResource("Theme_mq808")
+bbcode_enabled = true
+text = "[center]Step Four: Pattern Outline[/center]"
+
+[node name="Stage Four" type="RichTextLabel" parent="Stage Four"]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 85.0
+offset_right = 1618.0
+offset_bottom = 736.0
+theme = SubResource("Theme_oscdv")
+bbcode_enabled = true
+text = "Now you can create the outlines of your lace pattern with thread. 
+
+Click the [b]left mouse button[/b] [img=90]res://Images/LMB.png[/img] to start stitching your outline, and to add new stitches. Click the [b]right mouse button[/b] [img=90]res://Images/RMB.png[/img] to cut your thread before starting a new one. Make sure to create all of the outlines you want! "
+scroll_active = false
+
+[node name="Sprites" type="Node2D" parent="Stage Four"]
+
+[node name="Collecting" type="Sprite2D" parent="Stage Four/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(378.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(103.328, 580.495, 71.989, 67.1564)
+
+[node name="Drawing" type="Sprite2D" parent="Stage Four/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(562.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(274.376, 580.495, 76.6654, 67.1564)
+
+[node name="Basting" type="Sprite2D" parent="Stage Four/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(746.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(189.817, 580.495, 73.17, 67.1564)
+
+[node name="Stitching" type="Sprite2D" parent="Stage Four/Sprites"]
+position = Vector2(933, 973)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Arrow" type="Node2D" parent="Stage Four/Sprites/Stitching"]
+
+[node name="Arrow Animator" type="AnimationPlayer" parent="Stage Four/Sprites/Stitching/Arrow"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1232k")
+}
+autoplay = "ArrowAnimation"
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Stage Four/Sprites/Stitching/Arrow"]
+position = Vector2(0, -62.0211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(2109.6, 135.065, 42.2651, 44.6025)
+
+[node name="Pinning" type="Sprite2D" parent="Stage Four/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1107, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(366.992, 581.987, 66.905, 65.6646)
+
+[node name="Stitching2" type="Sprite2D" parent="Stage Four/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1280.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Finishing" type="Sprite2D" parent="Stage Four/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1469.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(535.953, 580.495, 60.767, 67.1564)
+
+[node name="Button" type="Button" parent="Stage Four" node_paths=PackedStringArray("parent", "InstructionParent")]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 732.0
+offset_right = 1480.0
+offset_bottom = 821.0
+script = ExtResource("4_1232k")
+parent = NodePath("..")
+InstructionParent = NodePath("../..")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Four/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -32.5
+offset_right = 177.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("5_mq808")
+bbcode_enabled = true
+text = "[center]Got it! Let's start!"
+
+[node name="Instructions8" type="Sprite2D" parent="Stage Four"]
+position = Vector2(674.909, 453.5)
+scale = Vector2(1.40155, 1.40155)
+texture = ExtResource("10_5pc8f")
+region_enabled = true
+region_rect = Rect2(820.271, 489.273, 398.442, 386.087)
+
+[node name="Stage Three" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1917.0
+offset_bottom = 1082.0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Stage Three"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1124.99
+color = Color(0, 0.766667, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stage Three"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -703.0
+offset_top = -505.0
+offset_right = 703.0
+offset_bottom = 505.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894614, 0.859374, 0.868286, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Three/ColorRect2"]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 53.0
+offset_right = 784.0
+offset_bottom = 124.0
+theme = SubResource("Theme_mq808")
+bbcode_enabled = true
+text = "[center]Step Three: Basting Stitch[/center]"
+
+[node name="Stage Three" type="RichTextLabel" parent="Stage Three"]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 85.0
+offset_right = 1618.0
+offset_bottom = 736.0
+theme = SubResource("Theme_oscdv")
+bbcode_enabled = true
+text = "Now your paper pattern needs to be attached to a fabric backing. 
+
+Click and drag with the [b]left mouse button[/b] [img=90]res://Images/LMB.png[/img] to guide your sewing needle, and create a basting stitch all the way around your pattern. Be sure your basting stays on the edges of your pattern using the shaded guides!"
+scroll_active = false
+
+[node name="Button" type="Button" parent="Stage Three" node_paths=PackedStringArray("parent", "InstructionParent")]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 732.0
+offset_right = 1480.0
+offset_bottom = 821.0
+script = ExtResource("4_1232k")
+parent = NodePath("..")
+InstructionParent = NodePath("../..")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Three/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -32.5
+offset_right = 177.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("5_mq808")
+bbcode_enabled = true
+text = "[center]Got it! Let's start!"
+
+[node name="Sprites" type="Node2D" parent="Stage Three"]
+
+[node name="Collecting" type="Sprite2D" parent="Stage Three/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(378.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(103.328, 580.495, 71.989, 67.1564)
+
+[node name="Drawing" type="Sprite2D" parent="Stage Three/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(562.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(274.376, 580.495, 76.6654, 67.1564)
+
+[node name="Basting" type="Sprite2D" parent="Stage Three/Sprites"]
+position = Vector2(746.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(189.817, 580.495, 73.17, 67.1564)
+
+[node name="Arrow" type="Node2D" parent="Stage Three/Sprites/Basting"]
+
+[node name="Arrow Animator" type="AnimationPlayer" parent="Stage Three/Sprites/Basting/Arrow"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1232k")
+}
+autoplay = "ArrowAnimation"
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Stage Three/Sprites/Basting/Arrow"]
+position = Vector2(0, -62.0211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(2109.6, 135.065, 42.2651, 44.6025)
+
+[node name="Stitching" type="Sprite2D" parent="Stage Three/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(933, 973)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Pinning" type="Sprite2D" parent="Stage Three/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1107, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(366.992, 581.987, 66.905, 65.6646)
+
+[node name="Stitching2" type="Sprite2D" parent="Stage Three/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1280.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Finishing" type="Sprite2D" parent="Stage Three/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1469.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(535.953, 580.495, 60.767, 67.1564)
+
+[node name="Instructions10" type="Sprite2D" parent="Stage Three"]
+position = Vector2(664, 468)
+scale = Vector2(0.582389, 0.582389)
+texture = ExtResource("9_yfgou")
+region_enabled = true
+region_rect = Rect2(489.78, 200.48, 1141.27, 971.395)
+
+[node name="Stage Two" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1917.0
+offset_bottom = 1082.0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Stage Two"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1124.99
+color = Color(0, 0.766667, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stage Two"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -703.0
+offset_top = -505.0
+offset_right = 703.0
+offset_bottom = 505.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894614, 0.859374, 0.868286, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Two/ColorRect2"]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 53.0
+offset_right = 784.0
+offset_bottom = 124.0
+theme = SubResource("Theme_mq808")
+bbcode_enabled = true
+text = "[center]Step Two: Pattern Drawing[/center]"
+
+[node name="Stage Two" type="RichTextLabel" parent="Stage Two"]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 85.0
+offset_right = 1618.0
+offset_bottom = 736.0
+theme = SubResource("Theme_oscdv")
+bbcode_enabled = true
+text = "Now we need a paper pattern for your project; you can draw whatever pattern you would  like! 
+
+Use the [b]left mouse button[/b] [img=90]res://Images/LMB.png[/img] 
+to draw the outlines of your lace by clicking and holding while you move your cursor. Use the [hint=This may be a two finger click if you are using a trackpad!][b]right mouse button[/b][/hint] [img=90]res://Images/RMB.png[/img]  to erase."
+scroll_active = false
+
+[node name="Button" type="Button" parent="Stage Two" node_paths=PackedStringArray("parent", "InstructionParent")]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 732.0
+offset_right = 1480.0
+offset_bottom = 821.0
+script = ExtResource("4_1232k")
+parent = NodePath("..")
+InstructionParent = NodePath("../..")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Two/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -32.5
+offset_right = 177.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("5_mq808")
+bbcode_enabled = true
+text = "[center]Got it! Let's start!"
+
+[node name="Sprites" type="Node2D" parent="Stage Two"]
+
+[node name="Collecting" type="Sprite2D" parent="Stage Two/Sprites"]
+modulate = Color(0.716643, 0.898917, 0.699854, 1)
+position = Vector2(378.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(103.328, 580.495, 71.989, 67.1564)
+
+[node name="Drawing" type="Sprite2D" parent="Stage Two/Sprites"]
+position = Vector2(562.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(274.376, 580.495, 76.6654, 67.1564)
+
+[node name="Arrow" type="Node2D" parent="Stage Two/Sprites/Drawing"]
+
+[node name="Arrow Animator" type="AnimationPlayer" parent="Stage Two/Sprites/Drawing/Arrow"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1232k")
+}
+autoplay = "ArrowAnimation"
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Stage Two/Sprites/Drawing/Arrow"]
+position = Vector2(0, -62.0211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(2109.6, 135.065, 42.2651, 44.6025)
+
+[node name="Basting" type="Sprite2D" parent="Stage Two/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(746.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(189.817, 580.495, 73.17, 67.1564)
+
+[node name="Stitching" type="Sprite2D" parent="Stage Two/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(933, 973)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Pinning" type="Sprite2D" parent="Stage Two/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1107, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(366.992, 581.987, 66.905, 65.6646)
+
+[node name="Stitching2" type="Sprite2D" parent="Stage Two/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1280.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Finishing" type="Sprite2D" parent="Stage Two/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1469.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(535.953, 580.495, 60.767, 67.1564)
+
+[node name="Instructions13" type="Sprite2D" parent="Stage Two"]
+position = Vector2(665, 462)
+scale = Vector2(0.803655, 0.803655)
+texture = ExtResource("7_h8uks")
+region_enabled = true
+region_rect = Rect2(655.026, 391.979, 650.171, 643.993)
+
+[node name="Stage One" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1917.0
+offset_bottom = 1082.0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Stage One"]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1124.99
+color = Color(0, 0.766667, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stage One"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -703.0
+offset_top = -505.0
+offset_right = 703.0
+offset_bottom = 505.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.894614, 0.859374, 0.868286, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage One/ColorRect2"]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 53.0
+offset_right = 784.0
+offset_bottom = 124.0
+theme = SubResource("Theme_mq808")
+bbcode_enabled = true
+text = "[center]Step One: Collecting Supplies[/center]"
+
+[node name="Stage One" type="RichTextLabel" parent="Stage One"]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = 85.0
+offset_right = 1618.0
+offset_bottom = 736.0
+theme = SubResource("Theme_oscdv")
+bbcode_enabled = true
+text = "Find and collect all of the items needed to begin your lace project. Items on your checklist will be checked off as you collect the 
+different materials and tools.
+
+Use the [b]left mouse button[/b] [img=90]res://Images/LMB.png[/img] 
+to click around to investigate, and 
+to collect the requisite materials."
+scroll_active = false
+
+[node name="Button" type="Button" parent="Stage One" node_paths=PackedStringArray("parent", "InstructionParent")]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 732.0
+offset_right = 1480.0
+offset_bottom = 821.0
+script = ExtResource("4_1232k")
+parent = NodePath("..")
+InstructionParent = NodePath("../..")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage One/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -32.5
+offset_right = 177.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("5_mq808")
+bbcode_enabled = true
+text = "[center]Got it! Let's start!"
+
+[node name="Sprites" type="Node2D" parent="Stage One"]
+
+[node name="Collecting" type="Sprite2D" parent="Stage One/Sprites"]
+position = Vector2(378.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(103.328, 580.495, 71.989, 67.1564)
+
+[node name="Arrow" type="Node2D" parent="Stage One/Sprites/Collecting"]
+
+[node name="Arrow Animator" type="AnimationPlayer" parent="Stage One/Sprites/Collecting/Arrow"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1232k")
+}
+autoplay = "ArrowAnimation"
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Stage One/Sprites/Collecting/Arrow"]
+position = Vector2(0, -62.0211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(2109.6, 135.065, 42.2651, 44.6025)
+
+[node name="Drawing" type="Sprite2D" parent="Stage One/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(562.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(274.376, 580.495, 76.6654, 67.1564)
+
+[node name="Basting" type="Sprite2D" parent="Stage One/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(746.39, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(189.817, 580.495, 73.17, 67.1564)
+
+[node name="Stitching" type="Sprite2D" parent="Stage One/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(933, 973)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Pinning" type="Sprite2D" parent="Stage One/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1107, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(366.992, 581.987, 66.905, 65.6646)
+
+[node name="Stitching2" type="Sprite2D" parent="Stage One/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1280.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(450.628, 580.495, 73.5211, 67.1564)
+
+[node name="Finishing" type="Sprite2D" parent="Stage One/Sprites"]
+modulate = Color(0.68, 0.68, 0.68, 1)
+position = Vector2(1469.15, 972.875)
+scale = Vector2(1.75746, 1.75746)
+texture = ExtResource("1_lf2ic")
+region_enabled = true
+region_rect = Rect2(535.953, 580.495, 60.767, 67.1564)
+
+[node name="Instructions2" type="Sprite2D" parent="Stage One"]
+position = Vector2(655, 487)
+scale = Vector2(0.579869, 0.579869)
+texture = ExtResource("8_yfgou")
+region_enabled = true
+region_rect = Rect2(282.053, 276.975, 1082.59, 914.255)

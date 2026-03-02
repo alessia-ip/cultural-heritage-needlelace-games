@@ -1,0 +1,2326 @@
+[gd_scene load_steps=102 format=3 uid="uid://1qml4wvo830g"]
+
+[ext_resource type="Theme" uid="uid://crjyy8uj1a4jv" path="res://MainTextTheme.theme" id="1_sed7k"]
+[ext_resource type="Script" uid="uid://7we612nu7lou" path="res://Scripts/ViewportManager.gd" id="1_uml5q"]
+[ext_resource type="Texture2D" uid="uid://jxj5y80cc48b" path="res://Images/TestArt/BlackOverlay.png" id="2_4h3ig"]
+[ext_resource type="Script" uid="uid://b61utxug5vu0j" path="res://Scripts/parent_stage_manager.gd" id="2_e8d1j"]
+[ext_resource type="Script" uid="uid://dup073p6fpkwd" path="res://Scripts/StageZeroScripts/ClickChangeStateReciever.gd" id="3_3cglx"]
+[ext_resource type="Script" uid="uid://c1n68waa6hb0f" path="res://Scripts/StageZeroScripts/ManageDrawerOpening.gd" id="3_054p3"]
+[ext_resource type="Texture2D" uid="uid://bh4m5m3y62win" path="res://Images/TestArt/DeskFull.png" id="3_dk4yh"]
+[ext_resource type="Script" uid="uid://dhb2cvqj6fncc" path="res://Scripts/StageZeroScripts/ClickToOpenDrawer.gd" id="3_flr15"]
+[ext_resource type="Script" uid="uid://dih4csm06r85y" path="res://Scripts/StageZeroScripts/StageManagerZero.gd" id="3_wuspt"]
+[ext_resource type="Texture2D" uid="uid://d4fkp703a5yf7" path="res://Images/TestArt/ClosedCupboard.png" id="4_270yp"]
+[ext_resource type="Script" uid="uid://cmw0gxe1x2dgl" path="res://Scripts/StageZeroScripts/ClickChangeState.gd" id="4_j8yin"]
+[ext_resource type="Script" uid="uid://cjillhlud08pm" path="res://Scripts/nextSceneButton.gd" id="4_l7a58"]
+[ext_resource type="Texture2D" uid="uid://c8llxo60ax60p" path="res://Images/TestArt/ClosedWindow.png" id="5_ivucg"]
+[ext_resource type="Texture2D" uid="uid://bxentk1mi7q1l" path="res://Images/TestArt/OpenCupboard.png" id="6_270yp"]
+[ext_resource type="Texture2D" uid="uid://dvjouxusatf7v" path="res://Images/TestArt/ChecklistPaper.png" id="6_j6k36"]
+[ext_resource type="Texture2D" uid="uid://dp8atnp48bd5w" path="res://Images/TestArt/ClosedDesk.png" id="7_6h2y1"]
+[ext_resource type="Texture2D" uid="uid://xjtritv6w4aa" path="res://Images/TestArt/Pillow.png" id="7_xtr4i"]
+[ext_resource type="Texture2D" uid="uid://cpvo68qqfbox7" path="res://Images/TestArt/OpenDesk.png" id="9_ivucg"]
+[ext_resource type="Texture2D" uid="uid://rrwj1d2fhw33" path="res://Images/TestArt/OpenWindow.png" id="9_j6k36"]
+[ext_resource type="Texture2D" uid="uid://drtex8k7ffecb" path="res://Images/TestArt/Background.png" id="10_6h2y1"]
+[ext_resource type="Texture2D" uid="uid://bj3so60fyxpuu" path="res://Images/TestArt/OpenDrawerBackground.png" id="11_j8yin"]
+[ext_resource type="Texture2D" uid="uid://dwpkoujk5daqr" path="res://Images/TestArt/Pen.png" id="15_kug1v"]
+[ext_resource type="Texture2D" uid="uid://lab55vgofxka" path="res://Images/TestArt/OpenCupboardBackground.png" id="15_paty1"]
+[ext_resource type="Texture2D" uid="uid://gxa0st2gdyih" path="res://Images/TestArt/Pencil.png" id="16_jgg36"]
+[ext_resource type="Texture2D" uid="uid://duaad6icjdeh0" path="res://Images/TestArt/Tape.png" id="17_6kdrw"]
+[ext_resource type="Texture2D" uid="uid://lcuekq8iyonr" path="res://Images/TestArt/TinyPencil.png" id="18_flr15"]
+[ext_resource type="Texture2D" uid="uid://bv211qepw1ni3" path="res://Images/TestArt/Eraser.png" id="19_6kdrw"]
+[ext_resource type="Script" uid="uid://dadwrbc26hbq6" path="res://Scripts/StageZeroScripts/PickableItem.gd" id="19_7dihf"]
+[ext_resource type="Texture2D" uid="uid://t5k5jum0mo6u" path="res://Images/TestArt/Tombolo.png" id="20_dae6u"]
+[ext_resource type="Texture2D" uid="uid://dxfoshgbtp7vp" path="res://Images/TestArt/Thimble.png" id="20_flr15"]
+[ext_resource type="Script" uid="uid://dm1k0gomocpo3" path="res://Scripts/StageZeroScripts/CloserDrawerButton.gd" id="24_am04v"]
+[ext_resource type="Texture2D" uid="uid://ifu5qfc2aw6y" path="res://Images/TestArt/Glasses.png" id="26_igjrv"]
+[ext_resource type="Texture2D" uid="uid://b04lpxjnvq8jd" path="res://Images/TestArt/Needle.png" id="27_dae6u"]
+[ext_resource type="Texture2D" uid="uid://cqn8hudt4wevp" path="res://Images/TestArt/Fabric.png" id="28_ks1up"]
+[ext_resource type="Texture2D" uid="uid://ccdtv2qtdox1k" path="res://Images/TestArt/SafetyPin.png" id="28_wlkwn"]
+[ext_resource type="Script" uid="uid://nqecfdqxewr6" path="res://Scripts/StageZeroScripts/mouse_hover_text.gd" id="29_ayybm"]
+[ext_resource type="Texture2D" uid="uid://cgsgaupowf304" path="res://Images/TestArt/Scissors.png" id="29_kbeia"]
+[ext_resource type="Texture2D" uid="uid://dg55q21d706u" path="res://Images/TestArt/Spool.png" id="30_e8d1j"]
+[ext_resource type="Texture2D" uid="uid://g7pqq7qj0whk" path="res://Images/TestArt/Paper.png" id="32_wlkwn"]
+[ext_resource type="Script" uid="uid://c84hmpd0sw3n7" path="res://Scripts/drawing_test.gd" id="38_kbeia"]
+[ext_resource type="Script" uid="uid://cvnpd7j21jd78" path="res://Scripts/StageOneScripts/StageOneParentManager.gd" id="40_6o3ab"]
+[ext_resource type="Script" uid="uid://butjum4u1os2w" path="res://Scripts/StageTwoScripts/SetPatternTexture.gd" id="41_qf21d"]
+[ext_resource type="Script" uid="uid://byw175s2c0q6p" path="res://Scripts/StageTwoScripts/StageTwoManager.gd" id="41_xmj7u"]
+[ext_resource type="Script" uid="uid://1bqd6ej6pin" path="res://Scenes/StageThreeParentManager.gd" id="42_icxmr"]
+[ext_resource type="Texture2D" uid="uid://blgxtb1cctil2" path="res://Images/TestArt/engin-akyurt-epgqiRNfNHw-unsplash.jpg" id="43_lovpp"]
+[ext_resource type="Texture2D" uid="uid://ck6etmce45hry" path="res://Images/ShadingTextures/Untitled_Artwork 54.png" id="44_ee2pc"]
+[ext_resource type="Script" uid="uid://ddocijyysnjt4" path="res://Scripts/TracingBasting.gd" id="45_65vhh"]
+[ext_resource type="Script" uid="uid://du2pgyft4rr5i" path="res://Scripts/CheckpointManager.gd" id="45_xmj7u"]
+[ext_resource type="Script" uid="uid://dw6cg5sng3wu0" path="res://Scripts/StageThreeScripts/outline_maker_Stagethree.gd" id="46_2s0wl"]
+[ext_resource type="Script" uid="uid://cpgqrvxigb3cb" path="res://Scripts/stagefourmanager.gd" id="48_rwlv1"]
+[ext_resource type="Script" uid="uid://ciadm72ox4f42" path="res://Scripts/StageFive/stage_five_manager.gd" id="48_t0j5a"]
+[ext_resource type="Script" uid="uid://dcd3ixqjphg8q" path="res://Scripts/StageThreeScripts/Paper.gd" id="48_trrng"]
+[ext_resource type="PackedScene" uid="uid://bwm2x6mulmgix" path="res://Scenes/Filling Pattern UI.tscn" id="48_vvki4"]
+[ext_resource type="Texture2D" uid="uid://yixsngg1saj4" path="res://Images/Untitled_Artwork 53.png" id="48_wic1k"]
+[ext_resource type="Script" uid="uid://d4ecduwvjf88q" path="res://Scripts/StageFour/AddPin.gd" id="49_ra1b1"]
+[ext_resource type="Script" uid="uid://cvkv35prcuxgg" path="res://Scripts/StageFive/stage_five_filling_patterns.gd" id="53_8fnl0"]
+[ext_resource type="StyleBox" uid="uid://ccpk85fkvomsa" path="res://ClearStyleButton.tres" id="54_r8p2h"]
+[ext_resource type="Script" uid="uid://bejx15b4n1u0d" path="res://Scenes/Help.gd" id="55_832yl"]
+[ext_resource type="Script" uid="uid://b6rmly4n11i6f" path="res://Scripts/StageSix/PinRemoval.gd" id="56_5tprd"]
+[ext_resource type="Texture2D" uid="uid://u0mfnj8fu1x1" path="res://Images/Untitled_Artwork 56.png" id="56_j2kq3"]
+[ext_resource type="PackedScene" uid="uid://cplvuokpbsr7o" path="res://Scenes/Instructions.tscn" id="57_832yl"]
+[ext_resource type="Script" uid="uid://dyxbgcump56to" path="res://Scenes/stage_six____removalmanager.gd" id="57_dndr6"]
+[ext_resource type="Script" uid="uid://dsatmb6uohycx" path="res://Scenes/checkifDone.gd" id="58_pvsag"]
+[ext_resource type="Script" uid="uid://lnmthv75iw75" path="res://Scripts/StageSix/Scissors.gd" id="58_ujnn1"]
+[ext_resource type="PackedScene" uid="uid://ppikuyesyxdy" path="res://Scenes/MouseSetup.tscn" id="59_cnim6"]
+[ext_resource type="AudioStream" uid="uid://ch6y4pwc8xcop" path="res://Audio/music/Ocarina-06.mp3" id="61_5tprd"]
+[ext_resource type="Script" uid="uid://dyccaptvje4ar" path="res://Scenes/restartGame.gd" id="65_b62ct"]
+[ext_resource type="Script" uid="uid://cmdwupg3nxyhp" path="res://Scenes/FinalPhoto.gd" id="67_318xp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kdrw"]
+size = Vector2(276, 53.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flr15"]
+size = Vector2(91.3333, 33.3334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am04v"]
+size = Vector2(81.3333, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayybm"]
+size = Vector2(63.3333, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks1up"]
+size = Vector2(92, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jctsl"]
+size = Vector2(86, 30.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vil14"]
+size = Vector2(66, 31.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y8cn"]
+size = Vector2(287.333, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbeia"]
+size = Vector2(240, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cglx"]
+size = Vector2(386.26, 437.758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igjrv"]
+size = Vector2(161.893, 66.5038)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ddmn"]
+size = Vector2(272.348, 200.195)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtr4i"]
+size = Vector2(281.948, 143.698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8d8ip"]
+size = Vector2(1388.33, 772.745)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dae6u"]
+size = Vector2(201.388, 48.8316)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_054p3"]
+size = Vector2(20, 234.118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uml5q"]
+size = Vector2(18.5714, 227.429)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_am04v"]
+radius = 95.9967
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dihf"]
+size = Vector2(20, 80.9286)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuspt"]
+size = Vector2(76.6798, 58.7335)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujnn1"]
+radius = 36.0139
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlkwn"]
+size = Vector2(273.241, 57.1254)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dndr6"]
+radius = 36.0076
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_b62ct"]
+light_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trrng"]
+size = Vector2(1304, 924)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_icxmr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lovpp"]
+size = Vector2(63, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_832yl"]
+size = Vector2(4730.62, 3308.31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wic1k"]
+size = Vector2(371.5, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fnl0"]
+size = Vector2(41, 137)
+
+[sub_resource type="Animation" id="Animation_ujnn1"]
+resource_name = "Help Wiggle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.36667, 1.43333, 1.56667, 1.7, 1.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.471239, -0.401426, 0.471239, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dndr6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pvsag"]
+_data = {
+&"Help Wiggle": SubResource("Animation_ujnn1"),
+&"RESET": SubResource("Animation_dndr6")
+}
+
+[node name="LaceMakingFullScene" type="Node"]
+script = ExtResource("1_uml5q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -74.0
+offset_top = -107.0
+offset_right = 2040.0
+offset_bottom = 1229.0
+mouse_filter = 2
+color = Color(0.528041, 0.454188, 0.51205, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(963, 541)
+
+[node name="ParentStageManager" type="Node" parent="." node_paths=PackedStringArray("StageZero", "StageOne", "StageTwo", "StageThree", "StageFour", "StageFive", "StageSix", "StageSeven", "Instructions", "InstructionText", "nextButton", "EndingUI", "HintZero", "HintOne", "HintTwo", "HintThree", "HintFour", "HintFive", "HintSix", "MainUI")]
+script = ExtResource("2_e8d1j")
+StageZero = NodePath("../Stage Zero - Gather Items")
+StageOne = NodePath("../Stage One - Draw Pattern")
+StageTwo = NodePath("../Stage Two  - Basting Stitch")
+StageThree = NodePath("../Stage Three  - Outline Stitch")
+StageFour = NodePath("../Stage Four - Preparing Pillow")
+StageFive = NodePath("../Stage Five  - Filling Patterns")
+StageSix = NodePath("../Stage Six  - Removal")
+StageSeven = NodePath("../Stage Seven - Done")
+Instructions = NodePath("../Instructions")
+InstructionText = NodePath("../Main Scene UI/Current Step")
+nextButton = NodePath("../Main Scene UI/NextButton")
+EndingUI = NodePath("../Ending")
+HintZero = NodePath("../Help/Help - Gather")
+HintOne = NodePath("../Help/Help - Draw")
+HintTwo = NodePath("../Help/Help - Baste")
+HintThree = NodePath("../Help/Help - Outline")
+HintFour = NodePath("../Help/Help - Prep")
+HintFive = NodePath("../Help/Help - Fill")
+HintSix = NodePath("../Help/Help - Removal")
+MainUI = NodePath("../Main Scene UI")
+
+[node name="Stage Zero - Gather Items" type="Node2D" parent="."]
+script = ExtResource("3_wuspt")
+
+[node name="Stage Zero Manager" type="Node2D" parent="Stage Zero - Gather Items"]
+
+[node name="Desk" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager"]
+position = Vector2(500, 652)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_dk4yh")
+region_enabled = true
+region_rect = Rect2(273.25, 66.5, 352.688, 640.5)
+
+[node name="Openable Drawer Colliders" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk" node_paths=PackedStringArray("OpenedDrawerNodes", "OpenedCupboardNodes", "DrawerZeroContents", "DrawerOneContents", "DrawerTwoContents", "DrawerThreeContents", "DrawerFourContents", "DrawerFiveContents", "DrawerSixContents", "DrawerSevenContents", "CupboardEightContents")]
+script = ExtResource("3_054p3")
+OpenedDrawerNodes = NodePath("../../Open Drawer Setup")
+OpenedCupboardNodes = NodePath("../../Open Cupboard Setup")
+DrawerZeroContents = NodePath("../../Open Drawer Setup/Drawer Zero")
+DrawerOneContents = NodePath("../../Open Drawer Setup/Drawer One")
+DrawerTwoContents = NodePath("../../Open Drawer Setup/Drawer Two")
+DrawerThreeContents = NodePath("../../Open Drawer Setup/Drawer Three")
+DrawerFourContents = NodePath("../../Open Drawer Setup/Drawer Four")
+DrawerFiveContents = NodePath("../../Open Drawer Setup/Drawer Five")
+DrawerSixContents = NodePath("../../Open Drawer Setup/Drawer Six")
+DrawerSevenContents = NodePath("../../Open Drawer Setup/Drawer Seven")
+CupboardEightContents = NodePath("../../Open Cupboard Setup/Cupboard Items")
+
+[node name="Top Drawer" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Top Drawer"]
+position = Vector2(-4.66666, -193.333)
+shape = SubResource("RectangleShape2D_6kdrw")
+
+[node name="Middle Top Left" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+DrawerNumber = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Middle Top Left"]
+position = Vector2(-84.3333, -10)
+shape = SubResource("RectangleShape2D_flr15")
+
+[node name="Middle Top Middle" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+DrawerNumber = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Middle Top Middle"]
+position = Vector2(15.3333, -11.6667)
+shape = SubResource("RectangleShape2D_am04v")
+
+[node name="Middle Top Right" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+DrawerNumber = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Middle Top Right"]
+position = Vector2(101.667, -13)
+shape = SubResource("RectangleShape2D_ayybm")
+
+[node name="Middle Bottom Left" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+DrawerNumber = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Middle Bottom Left"]
+position = Vector2(-82.6667, 31.6667)
+shape = SubResource("RectangleShape2D_ks1up")
+
+[node name="Middle Bottom Middle" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+DrawerNumber = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Middle Bottom Middle"]
+position = Vector2(17, 30)
+shape = SubResource("RectangleShape2D_jctsl")
+
+[node name="Middle Bottom Right" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+DrawerNumber = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Middle Bottom Right"]
+position = Vector2(103, 29.6667)
+shape = SubResource("RectangleShape2D_vil14")
+
+[node name="Bottom Drawer" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+script = ExtResource("3_flr15")
+DrawerNumber = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Bottom Drawer"]
+position = Vector2(5, 131.667)
+shape = SubResource("RectangleShape2D_5y8cn")
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders"]
+position = Vector2(0, 259.333)
+script = ExtResource("3_flr15")
+DrawerNumber = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk/Openable Drawer Colliders/Area2D"]
+position = Vector2(0.666656, -2)
+shape = SubResource("RectangleShape2D_kbeia")
+
+[node name="Window" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager" node_paths=PackedStringArray("childOpen", "childClosed")]
+script = ExtResource("3_3cglx")
+childOpen = NodePath("OpenWindow")
+childClosed = NodePath("ClosedWindow")
+
+[node name="ClosedWindow" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window"]
+position = Vector2(1190, 515.207)
+scale = Vector2(1.45757, 1.45757)
+texture = ExtResource("5_ivucg")
+region_enabled = true
+region_rect = Rect2(792.068, 92.4893, 393.913, 438.359)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window/ClosedWindow"]
+script = ExtResource("4_j8yin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window/ClosedWindow/Area2D"]
+position = Vector2(-0.34314, 6.05383)
+shape = SubResource("RectangleShape2D_3cglx")
+
+[node name="OpenWindow" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window"]
+position = Vector2(1188.5, 518.491)
+scale = Vector2(1.44472, 1.44472)
+texture = ExtResource("9_j6k36")
+region_enabled = true
+region_rect = Rect2(788.582, 90.7464, 398.27, 442.716)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window/OpenWindow"]
+script = ExtResource("4_j8yin")
+BoolToSend = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window/OpenWindow/Area2D"]
+position = Vector2(-0.34314, -1.21384)
+shape = SubResource("RectangleShape2D_3cglx")
+
+[node name="Pillow" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager"]
+position = Vector2(487, 550)
+scale = Vector2(1.48864, 1.48864)
+texture = ExtResource("7_xtr4i")
+region_enabled = true
+region_rect = Rect2(365.038, 265.044, 180.398, 88.0204)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Pillow" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../Stage Zero UI/Checklist/Cussinello")
+IsTakeable = true
+HoverText = "Cussinello"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Pillow/Area2D"]
+position = Vector2(2.3511, -1.67938)
+shape = SubResource("RectangleShape2D_igjrv")
+
+[node name="Desk State" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager" node_paths=PackedStringArray("childOpen", "childClosed")]
+script = ExtResource("3_3cglx")
+childOpen = NodePath("OpenDesk")
+childClosed = NodePath("ClosedDesk")
+
+[node name="ClosedDesk" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State"]
+position = Vector2(499, 578)
+scale = Vector2(1.49074, 1.51852)
+texture = ExtResource("7_6h2y1")
+region_enabled = true
+region_rect = Rect2(302.973, 230.844, 296.306, 216.129)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State/ClosedDesk"]
+script = ExtResource("4_j8yin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State/ClosedDesk/Area2D"]
+position = Vector2(-1.09317, -0.658447)
+shape = SubResource("RectangleShape2D_4ddmn")
+
+[node name="OpenDesk" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State"]
+position = Vector2(501.745, 821.25)
+scale = Vector2(1.50532, 1.50532)
+texture = ExtResource("9_ivucg")
+region_enabled = true
+region_rect = Rect2(236.058, 443.699, 432.258, 94.9923)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State/OpenDesk"]
+script = ExtResource("4_j8yin")
+BoolToSend = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State/OpenDesk/Area2D"]
+polygon = PackedVector2Array(-142.657, -38.6961, -207.76, 33.7138, -207.76, 44.3428, 202.784, 41.0212, 203.449, 27.735, 144.325, -38.0318)
+
+[node name="Cupboard" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager" node_paths=PackedStringArray("childOpen", "childClosed")]
+script = ExtResource("3_3cglx")
+childOpen = NodePath("OpenCupboard")
+childClosed = NodePath("ClosedCupboard")
+
+[node name="ClosedCupboard" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard"]
+position = Vector2(508.127, 1032)
+scale = Vector2(1.46835, 1.46835)
+texture = ExtResource("4_270yp")
+region_enabled = true
+region_rect = Rect2(304.188, 553.469, 308.812, 158.625)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard/ClosedCupboard"]
+script = ExtResource("4_j8yin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard/ClosedCupboard/Area2D"]
+position = Vector2(-0.767273, 9.19385)
+shape = SubResource("RectangleShape2D_xtr4i")
+
+[node name="OpenCupboard" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard"]
+position = Vector2(505, 1020)
+scale = Vector2(1.45205, 1.45205)
+texture = ExtResource("6_270yp")
+region_enabled = true
+region_rect = Rect2(216.013, 559.216, 481.933, 146.41)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard/OpenCupboard"]
+script = ExtResource("4_j8yin")
+BoolToSend = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard/OpenCupboard/Area2D"]
+polygon = PackedVector2Array(-138.424, -62.6699, -232.774, -17.2171, -232.085, 72.3112, -136.358, 71.6226)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard/OpenCupboard/Area2D"]
+polygon = PackedVector2Array(139.802, -68.1793, 134.981, 72.9999, 236.217, 76.4433, 234.84, -19.2831)
+
+[node name="Main Scene Items" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager"]
+
+[node name="Open Drawer Setup" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager"]
+visible = false
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+position = Vector2(960.75, 543.25)
+scale = Vector2(1.4694, 1.54385)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Area2D"]
+position = Vector2(9.69788, -3.07678)
+shape = SubResource("RectangleShape2D_8d8ip")
+
+[node name="BlackOverlay" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+modulate = Color(1, 1, 1, 0.545098)
+position = Vector2(960.75, 543.25)
+scale = Vector2(1.4694, 1.54385)
+texture = ExtResource("2_4h3ig")
+
+[node name="Background" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+position = Vector2(819, 560)
+scale = Vector2(1.56898, 1.6581)
+texture = ExtResource("10_6h2y1")
+region_enabled = true
+region_rect = Rect2(121.893, 119.505, 825.3, 491.52)
+
+[node name="OpenDrawerBackground" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+position = Vector2(785, 577)
+scale = Vector2(1.51888, 1.51888)
+texture = ExtResource("11_j8yin")
+region_enabled = true
+region_rect = Rect2(157.624, 163.08, 703.291, 437.487)
+region_filter_clip_enabled = true
+
+[node name="Drawer Zero" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+visible = false
+
+[node name="Tombolo" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Zero"]
+position = Vector2(681, 427)
+scale = Vector2(2.96939, 2.96939)
+texture = ExtResource("20_dae6u")
+region_enabled = true
+region_rect = Rect2(479.251, 227.375, 207.092, 49.2641)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Zero/Tombolo" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Tombolo")
+IsTakeable = true
+HoverText = "Tombolo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Zero/Tombolo/Area2D"]
+position = Vector2(1.68387, -1.17871)
+shape = SubResource("RectangleShape2D_dae6u")
+
+[node name="Drawer One" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+visible = false
+
+[node name="Pen" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
+position = Vector2(504, 534)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("15_kug1v")
+region_enabled = true
+region_rect = Rect2(280.711, 239.924, 30.0885, 244.051)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Pen"]
+script = ExtResource("19_7dihf")
+HoverText = "Pen"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Pen/Area2D"]
+rotation = -0.0174533
+shape = SubResource("RectangleShape2D_054p3")
+
+[node name="Pencil" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
+position = Vector2(425, 530)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("16_jgg36")
+region_enabled = true
+region_rect = Rect2(247.434, 244.469, 32.5613, 240.954)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Pencil" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Pencil")
+IsTakeable = true
+HoverText = "Pencil"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Pencil/Area2D"]
+position = Vector2(-0.714279, 2.85715)
+shape = SubResource("RectangleShape2D_uml5q")
+
+[node name="Tape" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
+position = Vector2(739, 456)
+scale = Vector2(1.34783, 1.34783)
+texture = ExtResource("17_6kdrw")
+region_enabled = true
+region_rect = Rect2(315.196, 223.713, 191.757, 184.742)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Tape"]
+script = ExtResource("19_7dihf")
+HoverText = "Tape"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Tape/Area2D"]
+shape = SubResource("CircleShape2D_am04v")
+
+[node name="TinyPencil" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
+position = Vector2(1134, 629)
+scale = Vector2(1.27273, 1.27273)
+texture = ExtResource("18_flr15")
+region_enabled = true
+region_rect = Rect2(725.993, 298.545, 22.6055, 93.5401)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/TinyPencil"]
+script = ExtResource("19_7dihf")
+HoverText = "Pencil Stub"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/TinyPencil/Area2D"]
+position = Vector2(0, -1.96432)
+shape = SubResource("RectangleShape2D_7dihf")
+
+[node name="Eraser" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
+position = Vector2(873, 660)
+scale = Vector2(1.22588, 1.22588)
+texture = ExtResource("19_6kdrw")
+region_enabled = true
+region_rect = Rect2(680.782, 424.045, 89.6426, 57.6831)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Eraser"]
+script = ExtResource("19_7dihf")
+HoverText = "Eraser"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Eraser/Area2D"]
+position = Vector2(1.63147, 0)
+shape = SubResource("RectangleShape2D_wuspt")
+
+[node name="Thimble" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
+position = Vector2(999, 426)
+texture = ExtResource("20_flr15")
+region_enabled = true
+region_rect = Rect2(462, 425, 55, 61)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Thimble"]
+script = ExtResource("19_7dihf")
+HoverText = "Thimble"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One/Thimble/Area2D"]
+polygon = PackedVector2Array(-25, 6, 1, 28, 25, -7, 23, -19, 14, -24, 4, -23, -14, -7)
+
+[node name="Drawer Two" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+visible = false
+
+[node name="Glasses" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
+position = Vector2(557.693, 399.25)
+scale = Vector2(1.19935, 1.19935)
+texture = ExtResource("26_igjrv")
+region_enabled = true
+region_rect = Rect2(218.538, 184.738, 328.949, 153.562)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Glasses"]
+script = ExtResource("19_7dihf")
+HoverText = "Glasses"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Glasses/Area2D"]
+polygon = PackedVector2Array(-143.989, -25.2221, -143.989, 2.29291, -130.648, 53.9877, -108.97, 73.1648, -84.7902, 76.5, -41.4332, 56.4891, -21.4223, 27.3065, -15.5858, 17.3011, 11.9292, 7.29562, 27.7711, 42.3147, 55.2861, 56.4891, 106.147, 56.4891, 137.831, 40.6471, 152.839, 3.96048, 158.676, -32.7262, 151.172, -60.2411, 120.322, -74.4155, 91.139, -72.748, 33.6076, -56.906, 18.5995, -46.0668, 11.0954, -27.7234, 11.9292, -22.7207, -1.41144, -26.0559, -13.9182, -20.2194, -27.2589, -38.5627, -53.94, -47.7343, -92.2943, -49.4019, -126.48, -40.2303, -136.485, -37.7289)
+
+[node name="Needle" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
+position = Vector2(1007, 451.129)
+scale = Vector2(1.41935, 1.41935)
+texture = ExtResource("27_dae6u")
+region_enabled = true
+region_rect = Rect2(340.618, 201.54, 62.5406, 96.6956)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Needle" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/SewingNeedle")
+IsTakeable = true
+HoverText = "Sewing Needle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Needle/Area2D"]
+polygon = PackedVector2Array(13.3864, -34.6136, -22.5454, 28.7955, -19.0227, 35.8409, -12.6818, 35.1364, 25.3636, -30.3864, 21.8409, -38.1364)
+
+[node name="SafetyPin" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
+position = Vector2(759.5, 534.7)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("28_wlkwn")
+region_enabled = true
+region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
+
+[node name="SafetyPin" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
+position = Vector2(45, 34.8461)
+rotation = 1.05796
+texture = ExtResource("28_wlkwn")
+region_enabled = true
+region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
+
+[node name="SafetyPin2" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
+position = Vector2(46.5385, -3.61539)
+rotation = -1.20035
+texture = ExtResource("28_wlkwn")
+region_enabled = true
+region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
+
+[node name="SafetyPin3" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
+position = Vector2(-27.3077, 59.4615)
+rotation = -1.08046
+texture = ExtResource("28_wlkwn")
+region_enabled = true
+region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
+
+[node name="SafetyPin4" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
+position = Vector2(24.2308, 85.6154)
+rotation = 0.462508
+texture = ExtResource("28_wlkwn")
+region_enabled = true
+region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Safety Pins")
+IsTakeable = true
+HoverText = "Safety Pins"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin/Area2D"]
+position = Vector2(0.384615, 0.23076)
+polygon = PackedVector2Array(-3.0769, -38.4615, -13.8461, -26.9231, -24.6154, 15.3846, -51.5385, 36.9231, -62.3077, 40.7692, -64.6154, 55.3846, -6.92303, 86.9231, 2.30774, 111.538, 17.6923, 121.538, 48.4615, 76.1538, 46.1539, 50.7692, 80.0001, 32.3077, 80.0001, 3.0769, 34.6154, -26.1539, 12.3077, -23.0769, 6.9231, -37.6923)
+
+[node name="Scissors" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
+position = Vector2(1076, 602)
+texture = ExtResource("29_kbeia")
+region_enabled = true
+region_rect = Rect2(257.502, 312.609, 164.607, 190.98)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Scissors" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Scissors")
+IsTakeable = true
+HoverText = "Scissors"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Scissors/Area2D"]
+polygon = PackedVector2Array(7, 21, -43, 76, -75, 70, -83, 44, -68, 10, -35, 9, -18, 22, 11, -13, 6, -94, 26, -97, 25, -26, 79, -85, 92, -71, 31, -7, 31, 24, 62, 28, 70, 57, 62, 91, 31, 96, 10, 88)
+
+[node name="Spool" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
+position = Vector2(530, 629)
+texture = ExtResource("30_e8d1j")
+region_enabled = true
+region_rect = Rect2(252.604, 243.056, 82.5631, 78.0016)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Spool" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Thread")
+IsTakeable = true
+HoverText = "Spool of Thread"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/Spool/Area2D"]
+polygon = PackedVector2Array(-50, 2, 7, 50, 52, -8, 1, -53)
+
+[node name="Drawer Three" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+visible = false
+
+[node name="Drawer Four" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+
+[node name="Paper" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four"]
+position = Vector2(1052, 525)
+scale = Vector2(1.69712, 1.69712)
+texture = ExtResource("32_wlkwn")
+region_enabled = true
+region_rect = Rect2(440.479, 237.41, 208.004, 253.163)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four/Paper" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Scrap Paper")
+IsTakeable = true
+HoverText = "Scrap Paper"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four/Paper/Area2D"]
+polygon = PackedVector2Array(-65.4051, -116.669, -93.6884, 80.1359, 57.7451, 123.739, 103.116, -88.3853)
+
+[node name="Paper2" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four"]
+position = Vector2(594, 525)
+scale = Vector2(1.69712, 1.69712)
+texture = ExtResource("32_wlkwn")
+region_enabled = true
+region_rect = Rect2(440.479, 237.41, 208.004, 253.163)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four/Paper2" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Paper")
+IsTakeable = true
+HoverText = "Drawing Paper"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four/Paper2/Area2D"]
+polygon = PackedVector2Array(-65.4051, -116.669, -93.6884, 80.1359, 57.7451, 123.739, 103.116, -88.3853)
+
+[node name="Drawer Five" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+visible = false
+
+[node name="Drawer Six" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+visible = false
+
+[node name="Drawer Seven" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+visible = false
+
+[node name="Close Drawer Button" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
+position = Vector2(1356, 154)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(237.956, 62.3448, 65.5863, 67.9286)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Close Drawer Button"]
+script = ExtResource("24_am04v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Close Drawer Button/Area2D"]
+position = Vector2(2, -1)
+shape = SubResource("CircleShape2D_ujnn1")
+
+[node name="Open Cupboard Setup" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager"]
+visible = false
+
+[node name="BlackOverlay" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup"]
+modulate = Color(1, 1, 1, 0.545098)
+position = Vector2(960.75, 543.25)
+scale = Vector2(1.4694, 1.54385)
+texture = ExtResource("2_4h3ig")
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup/BlackOverlay"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup/BlackOverlay/Area2D"]
+position = Vector2(9.69788, -3.07678)
+shape = SubResource("RectangleShape2D_8d8ip")
+
+[node name="Background" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup"]
+position = Vector2(819, 560)
+scale = Vector2(1.56898, 1.6581)
+texture = ExtResource("10_6h2y1")
+region_enabled = true
+region_rect = Rect2(121.893, 119.505, 825.3, 491.52)
+
+[node name="OpenCupboardBackground" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup"]
+position = Vector2(788.5, 563)
+scale = Vector2(1.66614, 1.59471)
+texture = ExtResource("15_paty1")
+region_enabled = true
+region_rect = Rect2(201.198, 135.192, 638.801, 454.917)
+
+[node name="Cupboard Items" type="Node2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup"]
+
+[node name="Fabric" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup/Cupboard Items"]
+position = Vector2(1009, 754)
+rotation = -3.10387
+scale = Vector2(1.63158, 2.8662)
+texture = ExtResource("28_ks1up")
+region_enabled = true
+region_rect = Rect2(489.804, 473.153, 304.785, 71.7141)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup/Cupboard Items/Fabric" node_paths=PackedStringArray("listItem")]
+script = ExtResource("19_7dihf")
+listItem = NodePath("../../../../../Stage Zero UI/Checklist/Fabric")
+IsTakeable = true
+HoverText = "Fabric"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup/Cupboard Items/Fabric/Area2D"]
+position = Vector2(3.80762, -1.20387)
+shape = SubResource("RectangleShape2D_wlkwn")
+
+[node name="Close Drawer Button" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup"]
+position = Vector2(1356, 154)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(237.169, 61.9863, 67.6841, 71.7019)
+
+[node name="Area2D" type="Area2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup/Close Drawer Button"]
+script = ExtResource("24_am04v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup/Close Drawer Button/Area2D"]
+position = Vector2(0.999998, -1)
+shape = SubResource("CircleShape2D_dndr6")
+
+[node name="Stage Zero UI" type="Control" parent="Stage Zero - Gather Items"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Checklist" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChecklistPaper" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+position = Vector2(1858.56, 796.757)
+scale = Vector2(1.61744, 1.61744)
+texture = ExtResource("6_j6k36")
+region_enabled = true
+region_rect = Rect2(970.751, 124.844, 248.062, 362.812)
+
+[node name="Header" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 0
+offset_left = 1700.0
+offset_top = 530.0
+offset_right = 1832.0
+offset_bottom = 590.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "[b]Supplies"
+
+[node name="Cussinello" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1828.44
+offset_top = 607.243
+offset_right = 1868.44
+offset_bottom = 647.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Cussinello"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = -5.0
+offset_bottom = 29.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Cussinello"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Cussinello"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Tombolo" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1828.44
+offset_top = 653.243
+offset_right = 1868.44
+offset_bottom = 693.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Tombolo"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = -5.0
+offset_bottom = 29.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Tombolo"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Tombolo"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Fabric" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 700.243
+offset_right = 1867.44
+offset_bottom = 740.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Fabric"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = -5.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Fabric"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Fabric"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Paper" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 746.243
+offset_right = 1867.44
+offset_bottom = 786.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Paper"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Pattern Paper"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Paper"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Scrap Paper" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 794.243
+offset_right = 1867.44
+offset_bottom = 834.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Scrap Paper"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Scrap Paper"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Scrap Paper"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Thread" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 840.243
+offset_right = 1867.44
+offset_bottom = 880.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Thread"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Thread"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Thread"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="SewingNeedle" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 888.243
+offset_right = 1867.44
+offset_bottom = 928.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/SewingNeedle"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Sewing Needle"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/SewingNeedle"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Pencil" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 935.243
+offset_right = 1867.44
+offset_bottom = 975.243
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Pencil"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Pencil"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Pencil"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Safety Pins" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 980.243
+offset_right = 1867.44
+offset_bottom = 1020.24
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Safety Pins"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Safety Pins"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Safety Pins"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Scissors" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1827.44
+offset_top = 1025.24
+offset_right = 1867.44
+offset_bottom = 1065.24
+
+[node name="Text" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Scissors"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 26.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+text = "Scissors"
+
+[node name="CheckBox" type="CheckBox" parent="Stage Zero - Gather Items/Stage Zero UI/Checklist/Scissors"]
+layout_mode = 0
+offset_left = -126.035
+offset_top = -4.95644
+offset_right = -102.035
+offset_bottom = 19.0436
+mouse_filter = 2
+disabled = true
+
+[node name="Mouse Hover Text" type="Control" parent="Stage Zero - Gather Items/Stage Zero UI" node_paths=PackedStringArray("p")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("29_ayybm")
+p = NodePath("../..")
+
+[node name="ColorRect" type="ColorRect" parent="Stage Zero - Gather Items/Stage Zero UI/Mouse Hover Text"]
+material = SubResource("CanvasItemMaterial_b62ct")
+layout_mode = 0
+offset_left = -130.0
+offset_top = -100.0
+offset_right = 130.0
+offset_bottom = -46.0
+color = Color(0.907942, 0.907942, 0.907942, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Zero - Gather Items/Stage Zero UI/Mouse Hover Text"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -130.0
+offset_top = -100.0
+offset_right = 131.0
+offset_bottom = -50.0
+theme = ExtResource("1_sed7k")
+text = "Mouse Text Label"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stage One - Draw Pattern" type="Node2D" parent="."]
+visible = false
+script = ExtResource("40_6o3ab")
+
+[node name="Stage One UI" type="Control" parent="Stage One - Draw Pattern"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Stage One Manager" type="Node2D" parent="Stage One - Draw Pattern"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Stage One - Draw Pattern/Stage One Manager"]
+offset_left = 299.0
+offset_top = 117.0
+offset_right = 1871.0
+offset_bottom = 1139.0
+
+[node name="SubViewport" type="SubViewport" parent="Stage One - Draw Pattern/Stage One Manager/SubViewportContainer"]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(1292, 912)
+render_target_update_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="Stage One - Draw Pattern/Stage One Manager/SubViewportContainer/SubViewport"]
+clip_contents = true
+offset_left = -18.0
+offset_top = -15.0
+offset_right = 1637.0
+offset_bottom = 1243.0
+color = Color(0.753081, 0.567881, 0.348072, 1)
+
+[node name="DrawingScript" type="Node2D" parent="Stage One - Draw Pattern/Stage One Manager/SubViewportContainer/SubViewport" node_paths=PackedStringArray("paper", "Instructions", "paperViewport")]
+script = ExtResource("38_kbeia")
+paper = NodePath("../../../Area2D")
+Instructions = NodePath("../../../../../Instructions")
+paperViewport = NodePath("..")
+
+[node name="Area2D" type="Area2D" parent="Stage One - Draw Pattern/Stage One Manager"]
+script = ExtResource("48_trrng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage One - Draw Pattern/Stage One Manager/Area2D"]
+position = Vector2(943, 568)
+shape = SubResource("RectangleShape2D_trrng")
+
+[node name="Stage Two  - Basting Stitch" type="Node2D" parent="." node_paths=PackedStringArray("BastingNode", "TransferElements", "StageFourBasting")]
+visible = false
+script = ExtResource("41_xmj7u")
+BastingNode = NodePath("Stage Two Manager/BastingStitch/Node2D")
+TransferElements = [NodePath("Stage Two Manager/Fabric/Sprite2D"), NodePath("Stage Two Manager/Pattern/Polygon2D"), NodePath("Stage Two Manager/Pattern/Sprite2D"), NodePath("Stage Two Manager/BastingStitch/Line2D")]
+StageFourBasting = NodePath("../Stage Three  - Outline Stitch/Stage Three Manager/Basting Elements")
+
+[node name="Stage Two Manager" type="Node2D" parent="Stage Two  - Basting Stitch"]
+
+[node name="Fabric" type="Node2D" parent="Stage Two  - Basting Stitch/Stage Two Manager"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/Fabric"]
+position = Vector2(963.5, 549)
+scale = Vector2(0.214137, 0.203125)
+texture = ExtResource("43_lovpp")
+
+[node name="Pattern" type="Node2D" parent="Stage Two  - Basting Stitch/Stage Two Manager"]
+
+[node name="Polygon2D" type="Polygon2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/Pattern"]
+color = Color(0.752941, 0.568627, 0.34902, 1)
+polygon = PackedVector2Array(430, 206, 433, 880, 1493, 887, 1487, 204)
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/Pattern"]
+position = Vector2(962, 541)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("PlaceholderTexture2D_icxmr")
+script = ExtResource("41_qf21d")
+
+[node name="BastingStitch" type="Node2D" parent="Stage Two  - Basting Stitch/Stage Two Manager"]
+
+[node name="Polygon2D" type="Polygon2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch"]
+texture_repeat = 2
+position = Vector2(0, 96.2412)
+scale = Vector2(1, 0.820588)
+color = Color(1, 0.807843, 0.141176, 0.498039)
+texture = ExtResource("44_ee2pc")
+texture_scale = Vector2(7, 7)
+polygon = PackedVector2Array(430, 206, 433, 880, 495, 882, 493, 202)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch"]
+texture_repeat = 2
+position = Vector2(993, 101.321)
+scale = Vector2(1, 0.810294)
+color = Color(1, 0.807843, 0.141176, 0.498039)
+texture = ExtResource("44_ee2pc")
+texture_scale = Vector2(7, 7)
+polygon = PackedVector2Array(430, 206, 433, 880, 495, 882, 493, 202, 460.861, 204.041)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch"]
+texture_repeat = 2
+color = Color(1, 0.807843, 0.141176, 0.498039)
+texture = ExtResource("44_ee2pc")
+texture_scale = Vector2(7, 7)
+polygon = PackedVector2Array(435, 267, 1486, 267, 1481, 204, 436, 207)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch"]
+texture_repeat = 2
+position = Vector2(0, 612)
+color = Color(1, 0.807843, 0.141176, 0.498039)
+texture = ExtResource("44_ee2pc")
+texture_scale = Vector2(7, 7)
+polygon = PackedVector2Array(435, 267, 1486, 267, 1481, 204, 436, 207)
+
+[node name="Node2D" type="Node2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch" node_paths=PackedStringArray("bastingLine")]
+script = ExtResource("45_xmj7u")
+bastingLine = NodePath("../Line2D")
+
+[node name="Area2D" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 237)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D2" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 299)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D2"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D3" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 361)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D3"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D4" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 421)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D4"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D5" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 482)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D5"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D6" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 543)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D6"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D7" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 602)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D7"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D8" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 663)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D8"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D9" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 724)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D9"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D10" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 785)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D10"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D11" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(466, 844)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D11"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D12" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(521, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D12"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D13" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 237)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D13"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D14" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 299)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D14"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D15" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 361)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D15"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D16" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 421)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D16"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D17" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 482)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D17"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D18" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 543)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D18"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D19" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 602)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D19"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D20" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 663)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D20"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D21" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 724)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D21"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D22" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 785)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D22"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D23" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1454, 844)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D23"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D24" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(578, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D24"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D25" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(634, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D25"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D26" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(689, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D26"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D27" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(745, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D27"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D28" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(802, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D28"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D29" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(858, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D29"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D30" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(913, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D30"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D31" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(969, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D31"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D32" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1027, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D32"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D33" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1083, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D33"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D34" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1138, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D34"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D35" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1194, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D35"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D36" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1240, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D36"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D37" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1296, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D37"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D38" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1351, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D38"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D39" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1407, 845)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D39"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D40" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(578, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D40"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D41" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(634, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D41"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D42" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(689, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D42"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D43" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(745, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D43"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D44" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(802, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D44"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D45" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(858, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D45"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D46" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(913, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D46"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D47" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(969, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D47"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D48" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1027, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D48"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D49" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1083, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D49"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D50" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1138, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D50"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D51" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1194, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D51"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D52" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1240, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D52"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D53" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1296, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D53"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D54" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1351, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D54"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D55" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(1407, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D55"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Area2D56" type="Area2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D"]
+position = Vector2(521, 236)
+script = ExtResource("45_65vhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch/Node2D/Area2D56"]
+shape = SubResource("RectangleShape2D_lovpp")
+
+[node name="Line2D" type="Line2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch"]
+
+[node name="Stage Two UI" type="Control" parent="Stage Two  - Basting Stitch"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Stage Three  - Outline Stitch" type="Node2D" parent="." node_paths=PackedStringArray("stitchingElements", "stageUI", "PolygonHolder", "NewPolyHolder", "OutlineHolder", "Basting")]
+visible = false
+script = ExtResource("42_icxmr")
+stitchingElements = NodePath("Stage Three Manager/Outline Maker")
+stageUI = NodePath("Stage Three UI")
+PolygonHolder = NodePath("Stage Three Manager/Polygon Holder")
+NewPolyHolder = NodePath("../Stage Five  - Filling Patterns/Stage Five Manager/Previous")
+OutlineHolder = NodePath("Stage Three Manager/Outline Holder")
+Basting = NodePath("Stage Three Manager/Basting Elements")
+
+[node name="Stage Three Manager" type="Node2D" parent="Stage Three  - Outline Stitch"]
+
+[node name="Basting Elements" type="Node2D" parent="Stage Three  - Outline Stitch/Stage Three Manager"]
+
+[node name="Fabric" type="Node2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Basting Elements"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Basting Elements/Fabric"]
+position = Vector2(963.5, 549)
+scale = Vector2(0.214137, 0.203125)
+texture = ExtResource("43_lovpp")
+
+[node name="Area2D" type="Area2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Basting Elements/Fabric/Sprite2D"]
+script = ExtResource("48_trrng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Basting Elements/Fabric/Sprite2D/Area2D"]
+position = Vector2(-70.0488, -59.0769)
+shape = SubResource("RectangleShape2D_832yl")
+
+[node name="Polygon Holder" type="Node2D" parent="Stage Three  - Outline Stitch/Stage Three Manager"]
+
+[node name="Outline Maker" type="Node2D" parent="Stage Three  - Outline Stitch/Stage Three Manager" node_paths=PackedStringArray("OutlinesHolder", "GhostLine", "paper", "ResetButton", "FinishButton", "PolygonHolder")]
+script = ExtResource("46_2s0wl")
+OutlinesHolder = NodePath("../Outline Holder")
+GhostLine = NodePath("ghost line")
+LineColor = Color(0.958941, 0.959256, 0.971721, 1)
+paper = NodePath("../Basting Elements/Fabric/Sprite2D/Area2D")
+ResetButton = NodePath("../../Stage Three UI/Clear")
+FinishButton = NodePath("../../Stage Three UI/Done")
+PolygonHolder = NodePath("../Polygon Holder")
+
+[node name="Line2D" type="Line2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Outline Maker"]
+
+[node name="ghost line" type="Line2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Outline Maker"]
+position = Vector2(1, 0)
+points = PackedVector2Array(241, 327, 740, 426)
+default_color = Color(1, 1, 1, 0.392157)
+
+[node name="Outline Holder" type="Node2D" parent="Stage Three  - Outline Stitch/Stage Three Manager"]
+
+[node name="Stage Three UI" type="Control" parent="Stage Three  - Outline Stitch"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Clear" type="Button" parent="Stage Three  - Outline Stitch/Stage Three UI"]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 1038.0
+offset_right = 1744.0
+offset_bottom = 1069.0
+text = "Clear and Reset"
+
+[node name="Done" type="Button" parent="Stage Three  - Outline Stitch/Stage Three UI"]
+layout_mode = 0
+offset_left = 1775.0
+offset_top = 1035.0
+offset_right = 1829.0
+offset_bottom = 1066.0
+text = "Finish"
+
+[node name="Stage Four - Preparing Pillow" type="Node2D" parent="." node_paths=PackedStringArray("pinSignal")]
+visible = false
+script = ExtResource("48_rwlv1")
+pinSignal = NodePath("Stage Four Manager/Area2D")
+
+[node name="Stage Four Manager" type="Node2D" parent="Stage Four - Preparing Pillow"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage Four - Preparing Pillow/Stage Four Manager"]
+position = Vector2(965, 668)
+scale = Vector2(0.761084, 0.796386)
+texture = ExtResource("48_wic1k")
+region_enabled = true
+region_rect = Rect2(226.324, 679.979, 1218.4, 830.532)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stage Four - Preparing Pillow/Stage Four Manager"]
+position = Vector2(955, 345)
+scale = Vector2(0.761084, 0.796386)
+texture = ExtResource("48_wic1k")
+region_enabled = true
+region_rect = Rect2(993.745, 333.361, 760.97, 242.414)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Stage Four - Preparing Pillow/Stage Four Manager"]
+position = Vector2(943, 380)
+scale = Vector2(0.761084, 0.796386)
+texture = ExtResource("48_wic1k")
+region_enabled = true
+region_rect = Rect2(207.479, 109.919, 716.703, 470.073)
+
+[node name="Polygon2D" type="Polygon2D" parent="Stage Four - Preparing Pillow/Stage Four Manager"]
+texture_repeat = 2
+color = Color(0.66921, 0.360648, 0.44165, 1)
+texture = ExtResource("44_ee2pc")
+texture_scale = Vector2(7.94, 7.94)
+polygon = PackedVector2Array(704, 435, 679, 523, 1027, 545, 1048, 431)
+
+[node name="Area2D" type="Area2D" parent="Stage Four - Preparing Pillow/Stage Four Manager" node_paths=PackedStringArray("pinOne", "pinTwo")]
+script = ExtResource("49_ra1b1")
+pinOne = NodePath("../pins/pin one")
+pinTwo = NodePath("../pins/pin two")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Four - Preparing Pillow/Stage Four Manager/Area2D"]
+position = Vector2(863, 487)
+shape = SubResource("RectangleShape2D_wic1k")
+
+[node name="pins" type="Node2D" parent="Stage Four - Preparing Pillow/Stage Four Manager"]
+
+[node name="pin one" type="Sprite2D" parent="Stage Four - Preparing Pillow/Stage Four Manager/pins"]
+position = Vector2(764.567, 472.88)
+rotation = 1.28805
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="pin two" type="Sprite2D" parent="Stage Four - Preparing Pillow/Stage Four Manager/pins"]
+position = Vector2(983.567, 474.88)
+rotation = 1.28805
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Stage Four UI" type="Control" parent="Stage Four - Preparing Pillow"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Stage Five  - Filling Patterns" type="Node2D" parent="." node_paths=PackedStringArray("doneBut", "Stage5UI", "StageSixHolder", "thingsToMove")]
+visible = false
+script = ExtResource("53_8fnl0")
+doneBut = NodePath("Stage Five UI/Done")
+Stage5UI = NodePath("Stage Five UI")
+StageSixHolder = NodePath("../Stage Six  - Removal/Stage Six Manager/Previous")
+thingsToMove = NodePath("Stage Five Manager/Previous")
+
+[node name="Stage Five Manager" type="Node2D" parent="Stage Five  - Filling Patterns" node_paths=PackedStringArray("redButton", "orangeButton", "yellowButton", "greenButton", "blueButton", "purpleButton", "blackButton", "whiteButton", "ciaraButton", "fissoButton", "grecoButton", "greco2Button", "greco3Button", "grecoRedinButton", "panettiButton", "rosalinaButton", "sbariRigaButton", "sbariConVoteviButton", "rotationSlider", "finishEditButton", "prev")]
+script = ExtResource("48_t0j5a")
+redButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/Red")
+orangeButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/Orange")
+yellowButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/Yellow")
+greenButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/Green")
+blueButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/Blue")
+purpleButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/Purple")
+blackButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/Black")
+whiteButton = NodePath("../Stage Five UI/FillingPatternUi/Control2/GridContainer/White")
+ciaraButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Sacola Ciara")
+fissoButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Fisso")
+grecoButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco")
+greco2Button = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Da Due")
+greco3Button = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Greca da Tre")
+grecoRedinButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Greco Redin")
+panettiButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Panetti")
+rosalinaButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/Rosalina")
+sbariRigaButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariARiga")
+sbariConVoteviButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariConVotevi")
+rotationSlider = NodePath("../Stage Five UI/FillingPatternUi/Control/HSlider")
+finishEditButton = NodePath("../Stage Five UI/FillingPatternUi/Control/Close")
+prev = NodePath("Previous")
+
+[node name="Previous" type="Node2D" parent="Stage Five  - Filling Patterns/Stage Five Manager"]
+
+[node name="Pins" type="Node2D" parent="Stage Five  - Filling Patterns/Stage Five Manager"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage Five  - Filling Patterns/Stage Five Manager/Pins"]
+position = Vector2(283, 184)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stage Five  - Filling Patterns/Stage Five Manager/Pins"]
+position = Vector2(283, 923)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Stage Five  - Filling Patterns/Stage Five Manager/Pins"]
+position = Vector2(1644, 184)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Stage Five  - Filling Patterns/Stage Five Manager/Pins"]
+position = Vector2(1644, 926)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Stage Five UI" type="Control" parent="Stage Five  - Filling Patterns"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="Stage Five  - Filling Patterns/Stage Five UI"]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Stage Five  - Filling Patterns/Stage Five UI/Button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Finish"
+
+[node name="Done" type="Button" parent="Stage Five  - Filling Patterns/Stage Five UI"]
+layout_mode = 0
+offset_left = 1841.0
+offset_top = 1031.0
+offset_right = 1895.0
+offset_bottom = 1062.0
+text = "Finish"
+
+[node name="FillingPatternUi" parent="Stage Five  - Filling Patterns/Stage Five UI" instance=ExtResource("48_vvki4")]
+layout_mode = 1
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 2.0
+offset_top = 0.0
+offset_right = 2431.0
+offset_bottom = 1080.0
+grow_vertical = 1
+mouse_filter = 2
+
+[node name="AnimationPlayer" parent="Stage Five  - Filling Patterns/Stage Five UI/FillingPatternUi/Control" index="0" node_paths=PackedStringArray("listenTo", "closer")]
+listenTo = NodePath("../../../../Stage Five Manager")
+closer = NodePath("../Close")
+
+[node name="Tutto Di Punti" parent="Stage Five  - Filling Patterns/Stage Five UI/FillingPatternUi/Control" index="3"]
+mouse_filter = 2
+
+[node name="Polygon2D" parent="Stage Five  - Filling Patterns/Stage Five UI/FillingPatternUi/Control/Tutto Di Punti/ScrollContainer/GridContainer/SbariARiga/Control" index="0"]
+texture_scale = Vector2(58, 58)
+
+[node name="AnimationPlayer" parent="Stage Five  - Filling Patterns/Stage Five UI/FillingPatternUi/Control2" index="0" node_paths=PackedStringArray("listenTo", "closer")]
+listenTo = NodePath("../../../../Stage Five Manager")
+closer = NodePath("../../Control/Close")
+
+[node name="Stage Six  - Removal" type="Node2D" parent="." node_paths=PackedStringArray("Stage6UI", "StageSevenHolder", "thingsToMove", "pinSignal")]
+visible = false
+script = ExtResource("57_dndr6")
+Stage6UI = NodePath("Stage Six UI")
+StageSevenHolder = NodePath("../Stage Seven - Done/Stage Seven Manager")
+thingsToMove = NodePath("Stage Six Manager/Previous")
+pinSignal = NodePath("Stage Six Manager")
+
+[node name="Stage Six Manager" type="Node2D" parent="Stage Six  - Removal" node_paths=PackedStringArray("pinOne", "pinTwo", "pinThree", "pinFour", "snipButton")]
+script = ExtResource("58_pvsag")
+pinOne = NodePath("Pins/Sprite2D")
+pinTwo = NodePath("Pins/Sprite2D2")
+pinThree = NodePath("Pins/Sprite2D3")
+pinFour = NodePath("Pins/Sprite2D4")
+snipButton = NodePath("../Stage Six UI/Control/Button")
+
+[node name="Previous" type="Node2D" parent="Stage Six  - Removal/Stage Six Manager"]
+
+[node name="Pins" type="Node2D" parent="Stage Six  - Removal/Stage Six Manager"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage Six  - Removal/Stage Six Manager/Pins"]
+position = Vector2(283, 184)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Area2D" type="Area2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D"]
+script = ExtResource("56_5tprd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D/Area2D"]
+position = Vector2(1.50003, 0.5)
+shape = SubResource("RectangleShape2D_8fnl0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stage Six  - Removal/Stage Six Manager/Pins"]
+position = Vector2(283, 923)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Area2D" type="Area2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D2"]
+script = ExtResource("56_5tprd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D2/Area2D"]
+shape = SubResource("RectangleShape2D_8fnl0")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Stage Six  - Removal/Stage Six Manager/Pins"]
+position = Vector2(1644, 184)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Area2D" type="Area2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D3"]
+script = ExtResource("56_5tprd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D3/Area2D"]
+shape = SubResource("RectangleShape2D_8fnl0")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Stage Six  - Removal/Stage Six Manager/Pins"]
+position = Vector2(1644, 926)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(87.3561, 70.405, 50.2491, 161.704)
+
+[node name="Area2D" type="Area2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D4"]
+script = ExtResource("56_5tprd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage Six  - Removal/Stage Six Manager/Pins/Sprite2D4/Area2D"]
+shape = SubResource("RectangleShape2D_8fnl0")
+
+[node name="Stage Six UI" type="Control" parent="Stage Six  - Removal"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="Stage Six  - Removal/Stage Six UI"]
+anchors_preset = 0
+offset_left = 87.0
+offset_top = 494.0
+offset_right = 127.0
+offset_bottom = 534.0
+
+[node name="Button" type="Button" parent="Stage Six  - Removal/Stage Six UI/Control" node_paths=PackedStringArray("topParent")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -45.0
+offset_right = 43.5
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("58_ujnn1")
+topParent = NodePath("../../../Stage Six Manager/Previous")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage Six  - Removal/Stage Six UI/Control/Button"]
+position = Vector2(44.5, 47)
+texture = ExtResource("56_j2kq3")
+region_enabled = true
+region_rect = Rect2(708.637, 59.0772, 92.1083, 92.452)
+
+[node name="Stage Seven - Done" type="Node2D" parent="."]
+
+[node name="Stage Seven Manager" type="Node2D" parent="Stage Seven - Done"]
+
+[node name="Stage Seven UI" type="Control" parent="Stage Seven - Done"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Main Scene UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Main Scene UI" node_paths=PackedStringArray("helpNode")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 19.0
+offset_right = 75.0
+offset_bottom = 78.0
+theme_override_styles/disabled = ExtResource("54_r8p2h")
+theme_override_styles/hover = ExtResource("54_r8p2h")
+theme_override_styles/pressed = ExtResource("54_r8p2h")
+theme_override_styles/normal = ExtResource("54_r8p2h")
+button_mask = 0
+script = ExtResource("55_832yl")
+helpNode = NodePath("../../Help")
+
+[node name="Help Button" type="Sprite2D" parent="Main Scene UI"]
+position = Vector2(47, 48)
+scale = Vector2(0.268362, 0.268362)
+texture = ExtResource("48_wic1k")
+region_enabled = true
+region_rect = Rect2(2027.31, 60.3996, 217.906, 211.057)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main Scene UI/Help Button"]
+reset_on_save = false
+libraries = {
+&"": SubResource("AnimationLibrary_pvsag")
+}
+autoplay = "Help Wiggle"
+
+[node name="Current Step" type="RichTextLabel" parent="Main Scene UI"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 18.0
+offset_right = 1589.0
+offset_bottom = 85.0
+theme = ExtResource("1_sed7k")
+text = "Gather your supplies"
+
+[node name="NextButton" type="Button" parent="Main Scene UI"]
+visible = false
+layout_mode = 0
+offset_left = 1716.0
+offset_top = 17.0
+offset_right = 1902.0
+offset_bottom = 52.0
+theme = ExtResource("1_sed7k")
+text = "Next
+"
+script = ExtResource("4_l7a58")
+
+[node name="CheckBox" type="CheckBox" parent="Main Scene UI"]
+visible = false
+layout_mode = 0
+offset_left = 285.0
+offset_top = 38.0
+offset_right = 309.0
+offset_bottom = 62.0
+mouse_filter = 2
+disabled = true
+
+[node name="SceneChangeEffect" type="Node" parent="."]
+
+[node name="Instructions" parent="." instance=ExtResource("57_832yl")]
+visible = false
+
+[node name="Help" type="Node2D" parent="."]
+
+[node name="Help - Gather" type="Control" parent="Help"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 73.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Help/Help - Gather"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 521.0
+offset_bottom = 268.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Help - Gather"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 500.0
+offset_bottom = 250.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Use the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to click on items in the room. Your checklist on the bottom right of the screen shows your collection progress.  "
+
+[node name="Help - Draw" type="Control" parent="Help"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 73.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Help/Help - Draw"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 521.0
+offset_bottom = 268.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Help - Draw"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 500.0
+offset_bottom = 250.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Hold the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to draw, and the [b]right mouse button[/b] [img=50]res://Images/RMB.png[/img]  to erase. You can sketch on the paper until you decide your pattern is done."
+
+[node name="Help - Baste" type="Control" parent="Help"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 73.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Help/Help - Baste"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 521.0
+offset_bottom = 268.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Help - Baste"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 500.0
+offset_bottom = 250.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Hold the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  and trace within the guidelines to add your basting stitch to hold your pattern paper and fabric together. "
+
+[node name="Help - Outline" type="Control" parent="Help"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 73.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Help/Help - Outline"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 521.0
+offset_bottom = 268.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Help - Outline"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 500.0
+offset_bottom = 250.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Click the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to add a stitch, and the [b]right mouse button[/b] [img=50]res://Images/RMB.png[/img]  to cut your thread. Be sure to outline your entire pattern!"
+
+[node name="Help - Prep" type="Control" parent="Help"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 73.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Help/Help - Prep"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 521.0
+offset_bottom = 202.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Help - Prep"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 500.0
+offset_bottom = 250.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Click the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to add safety pins. These will help secure your work to the cussinello!"
+
+[node name="Help - Fill" type="Control" parent="Help"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 73.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Help/Help - Fill"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 521.0
+offset_bottom = 268.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Help - Fill"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 500.0
+offset_bottom = 250.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Click the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  inside the sections of your pattern. Then, you can select what type and color of stitch to fill each shape with. "
+
+[node name="Help - Removal" type="Control" parent="Help"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 91.0
+offset_right = 73.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Help/Help - Removal"]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 521.0
+offset_bottom = 268.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Help/Help - Removal"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 500.0
+offset_bottom = 250.0
+theme = ExtResource("1_sed7k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Remove the pins to take the lace off of the cushion. Then remove the basting stitch to remove the lace from the  fabric and pattern paper. "
+
+[node name="Ending" type="Node2D" parent="."]
+
+[node name="Restart" type="Button" parent="Ending"]
+offset_left = 54.0
+offset_top = 1025.0
+offset_right = 178.0
+offset_bottom = 1056.0
+text = "Make another?"
+script = ExtResource("65_b62ct")
+
+[node name="Picture" type="Button" parent="Ending"]
+offset_left = 1798.0
+offset_top = 1043.0
+offset_right = 1911.0
+offset_bottom = 1074.0
+text = "Take a photo!"
+script = ExtResource("67_318xp")
+
+[node name="MouseSetup" parent="." instance=ExtResource("59_cnim6")]
+unique_name_in_owner = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource("61_5tprd")
+parameters/looping = true
+
+[editable path="Stage Five  - Filling Patterns/Stage Five UI/FillingPatternUi"]
