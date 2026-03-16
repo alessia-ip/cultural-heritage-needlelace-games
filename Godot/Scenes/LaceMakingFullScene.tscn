@@ -1,45 +1,46 @@
-[gd_scene load_steps=102 format=3 uid="uid://1qml4wvo830g"]
+[gd_scene load_steps=105 format=3 uid="uid://1qml4wvo830g"]
 
-[ext_resource type="Theme" uid="uid://crjyy8uj1a4jv" path="res://MainTextTheme.theme" id="1_sed7k"]
 [ext_resource type="Script" uid="uid://7we612nu7lou" path="res://Scripts/ViewportManager.gd" id="1_uml5q"]
 [ext_resource type="Texture2D" uid="uid://jxj5y80cc48b" path="res://Images/TestArt/BlackOverlay.png" id="2_4h3ig"]
 [ext_resource type="Script" uid="uid://b61utxug5vu0j" path="res://Scripts/parent_stage_manager.gd" id="2_e8d1j"]
 [ext_resource type="Script" uid="uid://dup073p6fpkwd" path="res://Scripts/StageZeroScripts/ClickChangeStateReciever.gd" id="3_3cglx"]
 [ext_resource type="Script" uid="uid://c1n68waa6hb0f" path="res://Scripts/StageZeroScripts/ManageDrawerOpening.gd" id="3_054p3"]
-[ext_resource type="Texture2D" uid="uid://bh4m5m3y62win" path="res://Images/TestArt/DeskFull.png" id="3_dk4yh"]
 [ext_resource type="Script" uid="uid://dhb2cvqj6fncc" path="res://Scripts/StageZeroScripts/ClickToOpenDrawer.gd" id="3_flr15"]
 [ext_resource type="Script" uid="uid://dih4csm06r85y" path="res://Scripts/StageZeroScripts/StageManagerZero.gd" id="3_wuspt"]
-[ext_resource type="Texture2D" uid="uid://d4fkp703a5yf7" path="res://Images/TestArt/ClosedCupboard.png" id="4_270yp"]
 [ext_resource type="Script" uid="uid://cmw0gxe1x2dgl" path="res://Scripts/StageZeroScripts/ClickChangeState.gd" id="4_j8yin"]
 [ext_resource type="Script" uid="uid://cjillhlud08pm" path="res://Scripts/nextSceneButton.gd" id="4_l7a58"]
-[ext_resource type="Texture2D" uid="uid://c8llxo60ax60p" path="res://Images/TestArt/ClosedWindow.png" id="5_ivucg"]
-[ext_resource type="Texture2D" uid="uid://bxentk1mi7q1l" path="res://Images/TestArt/OpenCupboard.png" id="6_270yp"]
+[ext_resource type="Texture2D" uid="uid://cl8hs0rmamh86" path="res://Images/UpdatedArt/Desk.png" id="4_pmjf2"]
 [ext_resource type="Texture2D" uid="uid://dvjouxusatf7v" path="res://Images/TestArt/ChecklistPaper.png" id="6_j6k36"]
-[ext_resource type="Texture2D" uid="uid://dp8atnp48bd5w" path="res://Images/TestArt/ClosedDesk.png" id="7_6h2y1"]
-[ext_resource type="Texture2D" uid="uid://xjtritv6w4aa" path="res://Images/TestArt/Pillow.png" id="7_xtr4i"]
-[ext_resource type="Texture2D" uid="uid://cpvo68qqfbox7" path="res://Images/TestArt/OpenDesk.png" id="9_ivucg"]
-[ext_resource type="Texture2D" uid="uid://rrwj1d2fhw33" path="res://Images/TestArt/OpenWindow.png" id="9_j6k36"]
+[ext_resource type="Texture2D" uid="uid://bypt5lkhv67r6" path="res://Images/UpdatedArt/ClosedWindow.png" id="8_67as5"]
+[ext_resource type="Texture2D" uid="uid://dmy26b2un4yry" path="res://Images/UpdatedArt/OpenWindow.png" id="10_3kkhb"]
 [ext_resource type="Texture2D" uid="uid://drtex8k7ffecb" path="res://Images/TestArt/Background.png" id="10_6h2y1"]
-[ext_resource type="Texture2D" uid="uid://bj3so60fyxpuu" path="res://Images/TestArt/OpenDrawerBackground.png" id="11_j8yin"]
-[ext_resource type="Texture2D" uid="uid://dwpkoujk5daqr" path="res://Images/TestArt/Pen.png" id="15_kug1v"]
-[ext_resource type="Texture2D" uid="uid://lab55vgofxka" path="res://Images/TestArt/OpenCupboardBackground.png" id="15_paty1"]
-[ext_resource type="Texture2D" uid="uid://gxa0st2gdyih" path="res://Images/TestArt/Pencil.png" id="16_jgg36"]
+[ext_resource type="Texture2D" uid="uid://cpdnexgyp1adv" path="res://Images/UpdatedArt/BackgroundOutside.png" id="11_binr3"]
+[ext_resource type="Texture2D" uid="uid://c23nbrm7f4vl1" path="res://Images/UpdatedArt/Cushion.png" id="12_g4224"]
+[ext_resource type="Texture2D" uid="uid://3b7aprvojvl7" path="res://Images/UpdatedArt/ClosedDesk.png" id="14_f12xc"]
+[ext_resource type="Texture2D" uid="uid://bein2hhsfcdr5" path="res://Images/UpdatedArt/OpenDesk.png" id="15_wnwk5"]
+[ext_resource type="Texture2D" uid="uid://b1pp82m32r7xq" path="res://Images/UpdatedArt/ClosedBottomDrawer.png" id="16_db7qa"]
 [ext_resource type="Texture2D" uid="uid://duaad6icjdeh0" path="res://Images/TestArt/Tape.png" id="17_6kdrw"]
-[ext_resource type="Texture2D" uid="uid://lcuekq8iyonr" path="res://Images/TestArt/TinyPencil.png" id="18_flr15"]
-[ext_resource type="Texture2D" uid="uid://bv211qepw1ni3" path="res://Images/TestArt/Eraser.png" id="19_6kdrw"]
+[ext_resource type="Texture2D" uid="uid://ogv7q7viv0l6" path="res://Images/UpdatedArt/OpenBottomDrawer.png" id="17_v3181"]
 [ext_resource type="Script" uid="uid://dadwrbc26hbq6" path="res://Scripts/StageZeroScripts/PickableItem.gd" id="19_7dihf"]
-[ext_resource type="Texture2D" uid="uid://t5k5jum0mo6u" path="res://Images/TestArt/Tombolo.png" id="20_dae6u"]
-[ext_resource type="Texture2D" uid="uid://dxfoshgbtp7vp" path="res://Images/TestArt/Thimble.png" id="20_flr15"]
+[ext_resource type="Texture2D" uid="uid://bydqmkq0owhrm" path="res://Images/UpdatedArt/OpenDrawer.png" id="20_hmptd"]
+[ext_resource type="Texture2D" uid="uid://c2ny7ub5hdyw7" path="res://Images/UpdatedArt/Dowel.png" id="21_vx0qa"]
+[ext_resource type="Texture2D" uid="uid://drbnbote03qmc" path="res://Images/UpdatedArt/Pen.png" id="22_e7h8p"]
+[ext_resource type="Texture2D" uid="uid://dqfgorvgailbu" path="res://Images/UpdatedArt/Pencil.png" id="23_kk30m"]
 [ext_resource type="Script" uid="uid://dm1k0gomocpo3" path="res://Scripts/StageZeroScripts/CloserDrawerButton.gd" id="24_am04v"]
-[ext_resource type="Texture2D" uid="uid://ifu5qfc2aw6y" path="res://Images/TestArt/Glasses.png" id="26_igjrv"]
-[ext_resource type="Texture2D" uid="uid://b04lpxjnvq8jd" path="res://Images/TestArt/Needle.png" id="27_dae6u"]
-[ext_resource type="Texture2D" uid="uid://cqn8hudt4wevp" path="res://Images/TestArt/Fabric.png" id="28_ks1up"]
-[ext_resource type="Texture2D" uid="uid://ccdtv2qtdox1k" path="res://Images/TestArt/SafetyPin.png" id="28_wlkwn"]
+[ext_resource type="Texture2D" uid="uid://badnmqht7r5cr" path="res://Images/UpdatedArt/PencilStub.png" id="25_y8pwu"]
+[ext_resource type="Texture2D" uid="uid://7bi4q8xanojn" path="res://Images/UpdatedArt/Eraser.png" id="26_oxs23"]
+[ext_resource type="Texture2D" uid="uid://yk8gngyllmai" path="res://Images/UpdatedArt/Thimble.png" id="27_jk5d4"]
+[ext_resource type="Texture2D" uid="uid://bpyqhveojx8sh" path="res://Images/UpdatedArt/Glasses.png" id="28_c4vg7"]
 [ext_resource type="Script" uid="uid://nqecfdqxewr6" path="res://Scripts/StageZeroScripts/mouse_hover_text.gd" id="29_ayybm"]
-[ext_resource type="Texture2D" uid="uid://cgsgaupowf304" path="res://Images/TestArt/Scissors.png" id="29_kbeia"]
-[ext_resource type="Texture2D" uid="uid://dg55q21d706u" path="res://Images/TestArt/Spool.png" id="30_e8d1j"]
-[ext_resource type="Texture2D" uid="uid://g7pqq7qj0whk" path="res://Images/TestArt/Paper.png" id="32_wlkwn"]
+[ext_resource type="Texture2D" uid="uid://be0liya4kgp2s" path="res://Images/UpdatedArt/Needle.png" id="29_eqf5r"]
+[ext_resource type="Texture2D" uid="uid://b7ernil2jrpq8" path="res://Images/UpdatedArt/SafetyPin.png" id="30_hw57r"]
+[ext_resource type="Texture2D" uid="uid://dlo0i3o4au1dm" path="res://Images/UpdatedArt/Scissors.png" id="31_43lro"]
+[ext_resource type="Texture2D" uid="uid://cuvw0lnb0jnul" path="res://Images/UpdatedArt/Thread.png" id="32_gxk20"]
+[ext_resource type="Texture2D" uid="uid://bplrs87sjf5xj" path="res://Images/UpdatedArt/Paper.png" id="33_w8yx4"]
+[ext_resource type="Texture2D" uid="uid://bbwu65sp5xonh" path="res://Images/UpdatedArt/OpenCupboard.png" id="36_6xxkj"]
+[ext_resource type="Texture2D" uid="uid://b2biwvlh7o5f0" path="res://Images/UpdatedArt/Fabric.png" id="37_icbgh"]
 [ext_resource type="Script" uid="uid://c84hmpd0sw3n7" path="res://Scripts/drawing_test.gd" id="38_kbeia"]
+[ext_resource type="Theme" uid="uid://dqg08nso8px5s" path="res://MainTextTheme2.theme" id="39_pmjf2"]
 [ext_resource type="Script" uid="uid://cvnpd7j21jd78" path="res://Scripts/StageOneScripts/StageOneParentManager.gd" id="40_6o3ab"]
 [ext_resource type="Script" uid="uid://butjum4u1os2w" path="res://Scripts/StageTwoScripts/SetPatternTexture.gd" id="41_qf21d"]
 [ext_resource type="Script" uid="uid://byw175s2c0q6p" path="res://Scripts/StageTwoScripts/StageTwoManager.gd" id="41_xmj7u"]
@@ -55,6 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://bwm2x6mulmgix" path="res://Scenes/Filling Pattern UI.tscn" id="48_vvki4"]
 [ext_resource type="Texture2D" uid="uid://yixsngg1saj4" path="res://Images/Untitled_Artwork 53.png" id="48_wic1k"]
 [ext_resource type="Script" uid="uid://d4ecduwvjf88q" path="res://Scripts/StageFour/AddPin.gd" id="49_ra1b1"]
+[ext_resource type="Texture2D" uid="uid://cu7b283r2bp50" path="res://Images/StitchOutline.png" id="50_3kkhb"]
 [ext_resource type="Script" uid="uid://cvkv35prcuxgg" path="res://Scripts/StageFive/stage_five_filling_patterns.gd" id="53_8fnl0"]
 [ext_resource type="StyleBox" uid="uid://ccpk85fkvomsa" path="res://ClearStyleButton.tres" id="54_r8p2h"]
 [ext_resource type="Script" uid="uid://bejx15b4n1u0d" path="res://Scenes/Help.gd" id="55_832yl"]
@@ -66,6 +68,7 @@
 [ext_resource type="Script" uid="uid://lnmthv75iw75" path="res://Scripts/StageSix/Scissors.gd" id="58_ujnn1"]
 [ext_resource type="PackedScene" uid="uid://ppikuyesyxdy" path="res://Scenes/MouseSetup.tscn" id="59_cnim6"]
 [ext_resource type="AudioStream" uid="uid://ch6y4pwc8xcop" path="res://Audio/music/Ocarina-06.mp3" id="61_5tprd"]
+[ext_resource type="Theme" uid="uid://dkiyv3bv33bf5" path="res://ButtonTheme.theme" id="64_67as5"]
 [ext_resource type="Script" uid="uid://dyccaptvje4ar" path="res://Scenes/restartGame.gd" id="65_b62ct"]
 [ext_resource type="Script" uid="uid://cmdwupg3nxyhp" path="res://Scenes/FinalPhoto.gd" id="67_318xp"]
 
@@ -241,7 +244,7 @@ script = ExtResource("3_wuspt")
 [node name="Desk" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager"]
 position = Vector2(500, 652)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_dk4yh")
+texture = ExtResource("4_pmjf2")
 region_enabled = true
 region_rect = Rect2(273.25, 66.5, 352.688, 640.5)
 
@@ -339,7 +342,7 @@ childClosed = NodePath("ClosedWindow")
 [node name="ClosedWindow" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window"]
 position = Vector2(1190, 515.207)
 scale = Vector2(1.45757, 1.45757)
-texture = ExtResource("5_ivucg")
+texture = ExtResource("8_67as5")
 region_enabled = true
 region_rect = Rect2(792.068, 92.4893, 393.913, 438.359)
 
@@ -353,7 +356,7 @@ shape = SubResource("RectangleShape2D_3cglx")
 [node name="OpenWindow" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window"]
 position = Vector2(1188.5, 518.491)
 scale = Vector2(1.44472, 1.44472)
-texture = ExtResource("9_j6k36")
+texture = ExtResource("10_3kkhb")
 region_enabled = true
 region_rect = Rect2(788.582, 90.7464, 398.27, 442.716)
 
@@ -365,10 +368,18 @@ BoolToSend = true
 position = Vector2(-0.34314, -1.21384)
 shape = SubResource("RectangleShape2D_3cglx")
 
+[node name="BackgroundOutside" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Window/OpenWindow"]
+show_behind_parent = true
+position = Vector2(0, 4.14285)
+scale = Vector2(1.03053, 1.03053)
+texture = ExtResource("11_binr3")
+region_enabled = true
+region_rect = Rect2(809.971, 107.371, 358.502, 407.861)
+
 [node name="Pillow" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager"]
 position = Vector2(487, 550)
 scale = Vector2(1.48864, 1.48864)
-texture = ExtResource("7_xtr4i")
+texture = ExtResource("12_g4224")
 region_enabled = true
 region_rect = Rect2(365.038, 265.044, 180.398, 88.0204)
 
@@ -390,7 +401,7 @@ childClosed = NodePath("ClosedDesk")
 [node name="ClosedDesk" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State"]
 position = Vector2(499, 578)
 scale = Vector2(1.49074, 1.51852)
-texture = ExtResource("7_6h2y1")
+texture = ExtResource("14_f12xc")
 region_enabled = true
 region_rect = Rect2(302.973, 230.844, 296.306, 216.129)
 
@@ -404,7 +415,7 @@ shape = SubResource("RectangleShape2D_4ddmn")
 [node name="OpenDesk" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Desk State"]
 position = Vector2(501.745, 821.25)
 scale = Vector2(1.50532, 1.50532)
-texture = ExtResource("9_ivucg")
+texture = ExtResource("15_wnwk5")
 region_enabled = true
 region_rect = Rect2(236.058, 443.699, 432.258, 94.9923)
 
@@ -423,7 +434,7 @@ childClosed = NodePath("ClosedCupboard")
 [node name="ClosedCupboard" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard"]
 position = Vector2(508.127, 1032)
 scale = Vector2(1.46835, 1.46835)
-texture = ExtResource("4_270yp")
+texture = ExtResource("16_db7qa")
 region_enabled = true
 region_rect = Rect2(304.188, 553.469, 308.812, 158.625)
 
@@ -437,7 +448,7 @@ shape = SubResource("RectangleShape2D_xtr4i")
 [node name="OpenCupboard" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Cupboard"]
 position = Vector2(505, 1020)
 scale = Vector2(1.45205, 1.45205)
-texture = ExtResource("6_270yp")
+texture = ExtResource("17_v3181")
 region_enabled = true
 region_rect = Rect2(216.013, 559.216, 481.933, 146.41)
 
@@ -480,7 +491,7 @@ region_rect = Rect2(121.893, 119.505, 825.3, 491.52)
 [node name="OpenDrawerBackground" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup"]
 position = Vector2(785, 577)
 scale = Vector2(1.51888, 1.51888)
-texture = ExtResource("11_j8yin")
+texture = ExtResource("20_hmptd")
 region_enabled = true
 region_rect = Rect2(157.624, 163.08, 703.291, 437.487)
 region_filter_clip_enabled = true
@@ -491,7 +502,7 @@ visible = false
 [node name="Tombolo" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Zero"]
 position = Vector2(681, 427)
 scale = Vector2(2.96939, 2.96939)
-texture = ExtResource("20_dae6u")
+texture = ExtResource("21_vx0qa")
 region_enabled = true
 region_rect = Rect2(479.251, 227.375, 207.092, 49.2641)
 
@@ -511,7 +522,7 @@ visible = false
 [node name="Pen" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
 position = Vector2(504, 534)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("15_kug1v")
+texture = ExtResource("22_e7h8p")
 region_enabled = true
 region_rect = Rect2(280.711, 239.924, 30.0885, 244.051)
 
@@ -526,7 +537,7 @@ shape = SubResource("RectangleShape2D_054p3")
 [node name="Pencil" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
 position = Vector2(425, 530)
 scale = Vector2(1.75, 1.75)
-texture = ExtResource("16_jgg36")
+texture = ExtResource("23_kk30m")
 region_enabled = true
 region_rect = Rect2(247.434, 244.469, 32.5613, 240.954)
 
@@ -557,7 +568,7 @@ shape = SubResource("CircleShape2D_am04v")
 [node name="TinyPencil" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
 position = Vector2(1134, 629)
 scale = Vector2(1.27273, 1.27273)
-texture = ExtResource("18_flr15")
+texture = ExtResource("25_y8pwu")
 region_enabled = true
 region_rect = Rect2(725.993, 298.545, 22.6055, 93.5401)
 
@@ -572,7 +583,7 @@ shape = SubResource("RectangleShape2D_7dihf")
 [node name="Eraser" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
 position = Vector2(873, 660)
 scale = Vector2(1.22588, 1.22588)
-texture = ExtResource("19_6kdrw")
+texture = ExtResource("26_oxs23")
 region_enabled = true
 region_rect = Rect2(680.782, 424.045, 89.6426, 57.6831)
 
@@ -586,7 +597,7 @@ shape = SubResource("RectangleShape2D_wuspt")
 
 [node name="Thimble" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer One"]
 position = Vector2(999, 426)
-texture = ExtResource("20_flr15")
+texture = ExtResource("27_jk5d4")
 region_enabled = true
 region_rect = Rect2(462, 425, 55, 61)
 
@@ -603,7 +614,7 @@ visible = false
 [node name="Glasses" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
 position = Vector2(557.693, 399.25)
 scale = Vector2(1.19935, 1.19935)
-texture = ExtResource("26_igjrv")
+texture = ExtResource("28_c4vg7")
 region_enabled = true
 region_rect = Rect2(218.538, 184.738, 328.949, 153.562)
 
@@ -617,7 +628,7 @@ polygon = PackedVector2Array(-143.989, -25.2221, -143.989, 2.29291, -130.648, 53
 [node name="Needle" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
 position = Vector2(1007, 451.129)
 scale = Vector2(1.41935, 1.41935)
-texture = ExtResource("27_dae6u")
+texture = ExtResource("29_eqf5r")
 region_enabled = true
 region_rect = Rect2(340.618, 201.54, 62.5406, 96.6956)
 
@@ -633,35 +644,35 @@ polygon = PackedVector2Array(13.3864, -34.6136, -22.5454, 28.7955, -19.0227, 35.
 [node name="SafetyPin" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
 position = Vector2(759.5, 534.7)
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("28_wlkwn")
+texture = ExtResource("30_hw57r")
 region_enabled = true
 region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
 
 [node name="SafetyPin" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
 position = Vector2(45, 34.8461)
 rotation = 1.05796
-texture = ExtResource("28_wlkwn")
+texture = ExtResource("30_hw57r")
 region_enabled = true
 region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
 
 [node name="SafetyPin2" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
 position = Vector2(46.5385, -3.61539)
 rotation = -1.20035
-texture = ExtResource("28_wlkwn")
+texture = ExtResource("30_hw57r")
 region_enabled = true
 region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
 
 [node name="SafetyPin3" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
 position = Vector2(-27.3077, 59.4615)
 rotation = -1.08046
-texture = ExtResource("28_wlkwn")
+texture = ExtResource("30_hw57r")
 region_enabled = true
 region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
 
 [node name="SafetyPin4" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two/SafetyPin"]
 position = Vector2(24.2308, 85.6154)
 rotation = 0.462508
-texture = ExtResource("28_wlkwn")
+texture = ExtResource("30_hw57r")
 region_enabled = true
 region_rect = Rect2(674.036, 211.752, 30.4658, 78.2109)
 
@@ -677,7 +688,7 @@ polygon = PackedVector2Array(-3.0769, -38.4615, -13.8461, -26.9231, -24.6154, 15
 
 [node name="Scissors" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
 position = Vector2(1076, 602)
-texture = ExtResource("29_kbeia")
+texture = ExtResource("31_43lro")
 region_enabled = true
 region_rect = Rect2(257.502, 312.609, 164.607, 190.98)
 
@@ -692,7 +703,7 @@ polygon = PackedVector2Array(7, 21, -43, 76, -75, 70, -83, 44, -68, 10, -35, 9, 
 
 [node name="Spool" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Two"]
 position = Vector2(530, 629)
-texture = ExtResource("30_e8d1j")
+texture = ExtResource("32_gxk20")
 region_enabled = true
 region_rect = Rect2(252.604, 243.056, 82.5631, 78.0016)
 
@@ -713,7 +724,7 @@ visible = false
 [node name="Paper" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four"]
 position = Vector2(1052, 525)
 scale = Vector2(1.69712, 1.69712)
-texture = ExtResource("32_wlkwn")
+texture = ExtResource("33_w8yx4")
 region_enabled = true
 region_rect = Rect2(440.479, 237.41, 208.004, 253.163)
 
@@ -729,7 +740,7 @@ polygon = PackedVector2Array(-65.4051, -116.669, -93.6884, 80.1359, 57.7451, 123
 [node name="Paper2" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Drawer Setup/Drawer Four"]
 position = Vector2(594, 525)
 scale = Vector2(1.69712, 1.69712)
-texture = ExtResource("32_wlkwn")
+texture = ExtResource("33_w8yx4")
 region_enabled = true
 region_rect = Rect2(440.479, 237.41, 208.004, 253.163)
 
@@ -789,7 +800,7 @@ region_rect = Rect2(121.893, 119.505, 825.3, 491.52)
 [node name="OpenCupboardBackground" type="Sprite2D" parent="Stage Zero - Gather Items/Stage Zero Manager/Open Cupboard Setup"]
 position = Vector2(788.5, 563)
 scale = Vector2(1.66614, 1.59471)
-texture = ExtResource("15_paty1")
+texture = ExtResource("36_6xxkj")
 region_enabled = true
 region_rect = Rect2(201.198, 135.192, 638.801, 454.917)
 
@@ -799,7 +810,7 @@ region_rect = Rect2(201.198, 135.192, 638.801, 454.917)
 position = Vector2(1009, 754)
 rotation = -3.10387
 scale = Vector2(1.63158, 2.8662)
-texture = ExtResource("28_ks1up")
+texture = ExtResource("37_icbgh")
 region_enabled = true
 region_rect = Rect2(489.804, 473.153, 304.785, 71.7141)
 
@@ -850,7 +861,7 @@ offset_left = 1700.0
 offset_top = 530.0
 offset_right = 1832.0
 offset_bottom = 590.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 bbcode_enabled = true
@@ -870,7 +881,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = -5.0
 offset_bottom = 29.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Cussinello"
@@ -898,7 +910,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = -5.0
 offset_bottom = 29.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Tombolo"
@@ -926,7 +939,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = -5.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Fabric"
@@ -954,7 +968,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = 32.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Pattern Paper"
@@ -982,7 +997,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = 32.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Scrap Paper"
@@ -1010,7 +1026,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = 32.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Thread"
@@ -1038,7 +1055,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = 32.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Sewing Needle"
@@ -1066,7 +1084,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = 32.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Pencil"
@@ -1094,7 +1113,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = 32.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Safety Pins"
@@ -1122,7 +1142,8 @@ offset_left = -96.0
 offset_top = -12.0
 offset_right = 32.0
 offset_bottom = 26.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 14
 text = "Scissors"
@@ -1140,6 +1161,8 @@ disabled = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 script = ExtResource("29_ayybm")
 p = NodePath("../..")
 
@@ -1159,7 +1182,8 @@ offset_left = -130.0
 offset_top = -100.0
 offset_right = 131.0
 offset_bottom = -50.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
+theme_type_variation = &"List"
 text = "Mouse Text Label"
 scroll_active = false
 horizontal_alignment = 1
@@ -1670,6 +1694,9 @@ script = ExtResource("45_65vhh")
 shape = SubResource("RectangleShape2D_lovpp")
 
 [node name="Line2D" type="Line2D" parent="Stage Two  - Basting Stitch/Stage Two Manager/BastingStitch"]
+texture_repeat = 2
+texture = ExtResource("50_3kkhb")
+texture_mode = 1
 
 [node name="Stage Two UI" type="Control" parent="Stage Two  - Basting Stitch"]
 layout_mode = 3
@@ -1678,7 +1705,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Stage Three  - Outline Stitch" type="Node2D" parent="." node_paths=PackedStringArray("stitchingElements", "stageUI", "PolygonHolder", "NewPolyHolder", "OutlineHolder", "Basting")]
-visible = false
 script = ExtResource("42_icxmr")
 stitchingElements = NodePath("Stage Three Manager/Outline Maker")
 stageUI = NodePath("Stage Three UI")
@@ -1718,6 +1744,9 @@ FinishButton = NodePath("../../Stage Three UI/Done")
 PolygonHolder = NodePath("../Polygon Holder")
 
 [node name="Line2D" type="Line2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Outline Maker"]
+texture_repeat = 2
+texture = ExtResource("50_3kkhb")
+texture_mode = 1
 
 [node name="ghost line" type="Line2D" parent="Stage Three  - Outline Stitch/Stage Three Manager/Outline Maker"]
 position = Vector2(1, 0)
@@ -1734,18 +1763,20 @@ offset_bottom = 40.0
 
 [node name="Clear" type="Button" parent="Stage Three  - Outline Stitch/Stage Three UI"]
 layout_mode = 0
-offset_left = 1615.0
-offset_top = 1038.0
-offset_right = 1744.0
-offset_bottom = 1069.0
+offset_left = 1523.0
+offset_top = 1013.0
+offset_right = 1754.0
+offset_bottom = 1081.0
+theme = ExtResource("64_67as5")
 text = "Clear and Reset"
 
 [node name="Done" type="Button" parent="Stage Three  - Outline Stitch/Stage Three UI"]
 layout_mode = 0
 offset_left = 1775.0
-offset_top = 1035.0
-offset_right = 1829.0
-offset_bottom = 1066.0
+offset_top = 1015.0
+offset_right = 1914.0
+offset_bottom = 1078.0
+theme = ExtResource("64_67as5")
 text = "Finish"
 
 [node name="Stage Four - Preparing Pillow" type="Node2D" parent="." node_paths=PackedStringArray("pinSignal")]
@@ -1897,10 +1928,11 @@ text = "Finish"
 
 [node name="Done" type="Button" parent="Stage Five  - Filling Patterns/Stage Five UI"]
 layout_mode = 0
-offset_left = 1841.0
-offset_top = 1031.0
-offset_right = 1895.0
-offset_bottom = 1062.0
+offset_left = 1791.0
+offset_top = 1018.0
+offset_right = 1898.0
+offset_bottom = 1074.0
+theme = ExtResource("64_67as5")
 text = "Finish"
 
 [node name="FillingPatternUi" parent="Stage Five  - Filling Patterns/Stage Five UI" instance=ExtResource("48_vvki4")]
@@ -2034,6 +2066,7 @@ region_enabled = true
 region_rect = Rect2(708.637, 59.0772, 92.1083, 92.452)
 
 [node name="Stage Seven - Done" type="Node2D" parent="."]
+visible = false
 
 [node name="Stage Seven Manager" type="Node2D" parent="Stage Seven - Done"]
 
@@ -2064,6 +2097,7 @@ script = ExtResource("55_832yl")
 helpNode = NodePath("../../Help")
 
 [node name="Help Button" type="Sprite2D" parent="Main Scene UI"]
+modulate = Color(1, 0.733333, 0, 1)
 position = Vector2(47, 48)
 scale = Vector2(0.268362, 0.268362)
 texture = ExtResource("48_wic1k")
@@ -2083,19 +2117,18 @@ offset_left = 84.0
 offset_top = 18.0
 offset_right = 1589.0
 offset_bottom = 85.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 text = "Gather your supplies"
 
 [node name="NextButton" type="Button" parent="Main Scene UI"]
-visible = false
 layout_mode = 0
-offset_left = 1716.0
+offset_left = 1584.0
 offset_top = 17.0
 offset_right = 1902.0
-offset_bottom = 52.0
-theme = ExtResource("1_sed7k")
-text = "Next
-"
+offset_bottom = 130.0
+theme = ExtResource("64_67as5")
+theme_override_font_sizes/font_size = 45
+text = "Next Step"
 script = ExtResource("4_l7a58")
 
 [node name="CheckBox" type="CheckBox" parent="Main Scene UI"]
@@ -2136,7 +2169,7 @@ offset_left = 14.0
 offset_top = 18.0
 offset_right = 500.0
 offset_bottom = 250.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Use the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to click on items in the room. Your checklist on the bottom right of the screen shows your collection progress.  "
@@ -2162,7 +2195,7 @@ offset_left = 14.0
 offset_top = 18.0
 offset_right = 500.0
 offset_bottom = 250.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Hold the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to draw, and the [b]right mouse button[/b] [img=50]res://Images/RMB.png[/img]  to erase. You can sketch on the paper until you decide your pattern is done."
@@ -2188,7 +2221,7 @@ offset_left = 14.0
 offset_top = 18.0
 offset_right = 500.0
 offset_bottom = 250.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Hold the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  and trace within the guidelines to add your basting stitch to hold your pattern paper and fabric together. "
@@ -2214,7 +2247,7 @@ offset_left = 14.0
 offset_top = 18.0
 offset_right = 500.0
 offset_bottom = 250.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Click the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to add a stitch, and the [b]right mouse button[/b] [img=50]res://Images/RMB.png[/img]  to cut your thread. Be sure to outline your entire pattern!"
@@ -2240,7 +2273,7 @@ offset_left = 14.0
 offset_top = 18.0
 offset_right = 500.0
 offset_bottom = 250.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Click the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  to add safety pins. These will help secure your work to the cussinello!"
@@ -2266,7 +2299,7 @@ offset_left = 14.0
 offset_top = 18.0
 offset_right = 500.0
 offset_bottom = 250.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Click the [b]left mouse button[/b] [img=50]res://Images/LMB.png[/img]  inside the sections of your pattern. Then, you can select what type and color of stitch to fill each shape with. "
@@ -2292,7 +2325,7 @@ offset_left = 14.0
 offset_top = 18.0
 offset_right = 500.0
 offset_bottom = 250.0
-theme = ExtResource("1_sed7k")
+theme = ExtResource("39_pmjf2")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Remove the pins to take the lace off of the cushion. Then remove the basting stitch to remove the lace from the  fabric and pattern paper. "
@@ -2301,17 +2334,19 @@ text = "Remove the pins to take the lace off of the cushion. Then remove the bas
 
 [node name="Restart" type="Button" parent="Ending"]
 offset_left = 54.0
-offset_top = 1025.0
-offset_right = 178.0
-offset_bottom = 1056.0
+offset_top = 994.0
+offset_right = 278.0
+offset_bottom = 1068.0
+theme = ExtResource("64_67as5")
 text = "Make another?"
 script = ExtResource("65_b62ct")
 
 [node name="Picture" type="Button" parent="Ending"]
-offset_left = 1798.0
-offset_top = 1043.0
-offset_right = 1911.0
-offset_bottom = 1074.0
+offset_left = 1702.0
+offset_top = 988.0
+offset_right = 1889.0
+offset_bottom = 1056.0
+theme = ExtResource("64_67as5")
 text = "Take a photo!"
 script = ExtResource("67_318xp")
 

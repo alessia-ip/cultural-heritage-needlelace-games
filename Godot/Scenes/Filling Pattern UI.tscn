@@ -1,16 +1,18 @@
-[gd_scene load_steps=36 format=3 uid="uid://bwm2x6mulmgix"]
+[gd_scene load_steps=42 format=3 uid="uid://bwm2x6mulmgix"]
 
 [ext_resource type="Texture2D" uid="uid://imqssrwsrrtt" path="res://Images/Stitches/Greco.png" id="1_47djk"]
 [ext_resource type="Script" uid="uid://cdgx0u8aberjj" path="res://Scripts/UiAnimation.gd" id="1_86xgc"]
 [ext_resource type="Texture2D" uid="uid://dao27crskrk4r" path="res://Images/Stitches/GrecoRedin.png" id="1_e8lgl"]
 [ext_resource type="Texture2D" uid="uid://bgsycufua7ey6" path="res://Images/Stitches/Fisso.png" id="2_4p44e"]
 [ext_resource type="Texture2D" uid="uid://c6qkiojgoyuxt" path="res://Images/Stitches/SacolaCiara.png" id="2_jly1w"]
+[ext_resource type="Theme" uid="uid://crjyy8uj1a4jv" path="res://MainTextTheme.theme" id="2_nkygs"]
 [ext_resource type="Texture2D" uid="uid://q1q2bd117gvk" path="res://Images/Stitches/GrecoDaDo.png" id="2_ompl7"]
 [ext_resource type="Texture2D" uid="uid://dxw8fq4nf57tj" path="res://Images/Stitches/GrecoDaTre.png" id="3_ucgbk"]
 [ext_resource type="Texture2D" uid="uid://bjsogeraiqudo" path="res://Images/Stitches/Panetti.png" id="5_ompl7"]
 [ext_resource type="Texture2D" uid="uid://cf45mv31hyc33" path="res://Images/Stitches/Rosalina.png" id="6_ucgbk"]
 [ext_resource type="Texture2D" uid="uid://ddlo82l157vl7" path="res://Images/Stitches/SbariARiga.png" id="9_ecr7e"]
 [ext_resource type="Texture2D" uid="uid://dqiapv87qca05" path="res://Images/Stitches/SbariConVotevi.png" id="10_ca33t"]
+[ext_resource type="Theme" uid="uid://dkiyv3bv33bf5" path="res://ButtonTheme.theme" id="13_37dxu"]
 
 [sub_resource type="Animation" id="Animation_xoiyu"]
 resource_name = "CloseUI"
@@ -63,6 +65,26 @@ _data = {
 &"OpenUI": SubResource("Animation_ca33t"),
 &"RESET": SubResource("Animation_86xgc")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8wx4"]
+bg_color = Color(0.93, 0.279, 0.76725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj3au"]
+bg_color = Color(0.585782, 0.445156, 0.528988, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acvib"]
+bg_color = Color(0.32369, 0.182304, 0.0521423, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_v85xn"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_d8wx4")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_hj3au")
+HSlider/styles/slider = SubResource("StyleBoxFlat_acvib")
 
 [sub_resource type="Animation" id="Animation_4pqh0"]
 resource_name = "CloseUI"
@@ -255,6 +277,7 @@ offset_top = 48.0
 offset_right = 250.0
 offset_bottom = 88.0
 grow_horizontal = 2
+theme = ExtResource("2_nkygs")
 text = "Stitches"
 scroll_active = false
 horizontal_alignment = 1
@@ -301,12 +324,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Sacola Ciara"
 scroll_active = false
 horizontal_alignment = 1
@@ -341,12 +366,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Fisso"
 scroll_active = false
 horizontal_alignment = 1
@@ -381,12 +408,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Greco"
 scroll_active = false
 horizontal_alignment = 1
@@ -421,12 +450,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Greco da Due"
 scroll_active = false
 horizontal_alignment = 1
@@ -461,12 +492,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Greco da tre"
 scroll_active = false
 horizontal_alignment = 1
@@ -501,12 +534,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Greco Redin"
 scroll_active = false
 horizontal_alignment = 1
@@ -541,12 +576,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Panetti"
 scroll_active = false
 horizontal_alignment = 1
@@ -581,12 +618,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Rosalina"
 scroll_active = false
 horizontal_alignment = 1
@@ -622,12 +661,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Sbari a Riga"
 scroll_active = false
 horizontal_alignment = 1
@@ -663,12 +704,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -100.016
 offset_top = -25.0
-offset_right = 100.0
+offset_right = 99.984
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = ExtResource("2_nkygs")
+theme_override_font_sizes/normal_font_size = 12
 text = "Sbari con Votevi"
 scroll_active = false
 horizontal_alignment = 1
@@ -699,6 +742,7 @@ offset_left = 66.0
 offset_top = 997.0
 offset_right = 449.0
 offset_bottom = 1062.0
+theme = ExtResource("13_37dxu")
 text = "Close"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
@@ -708,12 +752,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -249.984
-offset_top = 777.0
-offset_right = 250.016
-offset_bottom = 817.0
+offset_left = -250.0
+offset_top = 809.0
+offset_right = 250.0
+offset_bottom = 849.0
 grow_horizontal = 2
-text = "Direction
+theme = ExtResource("2_nkygs")
+text = "Stitch Direction
 "
 scroll_active = false
 horizontal_alignment = 1
@@ -721,10 +766,11 @@ vertical_alignment = 1
 
 [node name="HSlider" type="HSlider" parent="Control"]
 layout_mode = 0
-offset_left = 66.016
-offset_top = 809.0
-offset_right = 438.016
-offset_bottom = 904.0
+offset_left = 66.0
+offset_top = 841.0
+offset_right = 438.0
+offset_bottom = 936.0
+theme = SubResource("Theme_v85xn")
 max_value = 360.0
 step = 5.0
 rounded = true

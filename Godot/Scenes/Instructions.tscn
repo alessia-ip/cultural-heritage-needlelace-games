@@ -1,11 +1,12 @@
-[gd_scene load_steps=20 format=3 uid="uid://cplvuokpbsr7o"]
+[gd_scene load_steps=21 format=3 uid="uid://cplvuokpbsr7o"]
 
 [ext_resource type="Texture2D" uid="uid://brpnym6ojb46n" path="res://Images/icons.png" id="1_lf2ic"]
 [ext_resource type="FontFile" uid="uid://dax7l3cqfmi5o" path="res://Fonts/Inknut Antiqua/InknutAntiqua-Black.ttf" id="1_oscdv"]
 [ext_resource type="FontFile" uid="uid://bs3dsfsly4ju2" path="res://Fonts/Inknut Antiqua/InknutAntiqua-Bold.ttf" id="2_vs51u"]
 [ext_resource type="FontFile" uid="uid://5lyxva8r65ay" path="res://Fonts/Inknut Antiqua/InknutAntiqua-Regular.ttf" id="3_8lqe2"]
 [ext_resource type="Script" uid="uid://d2r314sm0de0y" path="res://Scripts/UICloser.gd" id="4_1232k"]
-[ext_resource type="Theme" uid="uid://crjyy8uj1a4jv" path="res://MainTextTheme.theme" id="5_mq808"]
+[ext_resource type="Theme" uid="uid://dkiyv3bv33bf5" path="res://ButtonTheme.theme" id="5_rwgaa"]
+[ext_resource type="Theme" uid="uid://dqg08nso8px5s" path="res://MainTextTheme2.theme" id="6_8q1r4"]
 [ext_resource type="Texture2D" uid="uid://dh0kub88jcg4" path="res://Images/InstructionsImages/Instructions5.png" id="7_8q1r4"]
 [ext_resource type="Texture2D" uid="uid://cmeouu7ufy0ow" path="res://Images/InstructionsImages/Instructions13.png" id="7_h8uks"]
 [ext_resource type="Texture2D" uid="uid://cebmvxcaohjxc" path="res://Images/InstructionsImages/Instructions2.png" id="8_yfgou"]
@@ -267,6 +268,7 @@ offset_left = 1125.0
 offset_top = 732.0
 offset_right = 1480.0
 offset_bottom = 821.0
+theme = ExtResource("5_rwgaa")
 script = ExtResource("4_1232k")
 parent = NodePath("..")
 InstructionParent = NodePath("../..")
@@ -285,7 +287,7 @@ offset_bottom = 32.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("5_mq808")
+theme = ExtResource("6_8q1r4")
 bbcode_enabled = true
 text = "[center]Got it! Let's start!"
 
@@ -419,6 +421,7 @@ offset_left = 1125.0
 offset_top = 732.0
 offset_right = 1480.0
 offset_bottom = 821.0
+theme = ExtResource("5_rwgaa")
 script = ExtResource("4_1232k")
 parent = NodePath("..")
 InstructionParent = NodePath("../..")
@@ -437,7 +440,7 @@ offset_bottom = 32.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("5_mq808")
+theme = ExtResource("6_8q1r4")
 bbcode_enabled = true
 text = "[center]Got it! Let's start!"
 
@@ -578,6 +581,7 @@ offset_left = 1125.0
 offset_top = 732.0
 offset_right = 1480.0
 offset_bottom = 821.0
+theme = ExtResource("5_rwgaa")
 script = ExtResource("4_1232k")
 parent = NodePath("..")
 InstructionParent = NodePath("../..")
@@ -596,7 +600,7 @@ offset_bottom = 32.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("5_mq808")
+theme = ExtResource("6_8q1r4")
 bbcode_enabled = true
 text = "[center]Got it! Let's start!"
 
@@ -737,6 +741,7 @@ offset_left = 1125.0
 offset_top = 732.0
 offset_right = 1480.0
 offset_bottom = 821.0
+theme = ExtResource("5_rwgaa")
 script = ExtResource("4_1232k")
 parent = NodePath("..")
 InstructionParent = NodePath("../..")
@@ -755,7 +760,7 @@ offset_bottom = 32.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("5_mq808")
+theme = ExtResource("6_8q1r4")
 bbcode_enabled = true
 text = "[center]Got it! Let's start!"
 
@@ -823,6 +828,7 @@ offset_left = 1125.0
 offset_top = 732.0
 offset_right = 1480.0
 offset_bottom = 821.0
+theme = ExtResource("5_rwgaa")
 script = ExtResource("4_1232k")
 parent = NodePath("..")
 InstructionParent = NodePath("../..")
@@ -841,7 +847,7 @@ offset_bottom = 32.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("5_mq808")
+theme = ExtResource("6_8q1r4")
 bbcode_enabled = true
 text = "[center]Got it! Let's start!"
 
@@ -983,6 +989,7 @@ offset_left = 1125.0
 offset_top = 732.0
 offset_right = 1480.0
 offset_bottom = 821.0
+theme = ExtResource("5_rwgaa")
 script = ExtResource("4_1232k")
 parent = NodePath("..")
 InstructionParent = NodePath("../..")
@@ -1001,7 +1008,7 @@ offset_bottom = 32.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("5_mq808")
+theme = ExtResource("6_8q1r4")
 bbcode_enabled = true
 text = "[center]Got it! Let's start!"
 
@@ -1145,6 +1152,7 @@ offset_left = 1125.0
 offset_top = 732.0
 offset_right = 1480.0
 offset_bottom = 821.0
+theme = ExtResource("5_rwgaa")
 script = ExtResource("4_1232k")
 parent = NodePath("..")
 InstructionParent = NodePath("../..")
@@ -1163,7 +1171,7 @@ offset_bottom = 32.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme = ExtResource("5_mq808")
+theme = ExtResource("6_8q1r4")
 bbcode_enabled = true
 text = "[center]Got it! Let's start!"
 

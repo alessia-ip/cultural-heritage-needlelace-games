@@ -28,7 +28,7 @@ var testTexture: Texture2D = load("res://Images/TestTexture.png")
 
 var testHover: Script = load("res://Scripts/test_hover_polygon.gd")
 
-#var testThreadTexture: Texture2D = load("res://Images/StitchingOutline.png")
+var threadTexture: Texture2D = load("res://Images/StitchOutline.png")
 
 signal finishedStitching
 
@@ -83,6 +83,9 @@ func StartOutlineStitches():
 	
 	currentStitchingLine.default_color = LineColor
 	currentStitchingLine.width = 10
+	currentStitchingLine.texture = threadTexture
+	currentStitchingLine.texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+	currentStitchingLine.texture_mode = Line2D.LINE_TEXTURE_TILE
 	
 	#Hierarchy
 	OutlinesHolder.add_child(currentStitchingLine)
