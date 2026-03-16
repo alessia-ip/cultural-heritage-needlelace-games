@@ -98,16 +98,16 @@ You&#39;d decided on this pattern a while ago, because (live:0.1s)[(text-colour:
 
 It sits [[upon the tabletop]] with the rest of your supplies.</tw-passagedata><tw-passagedata pid="12" name="murello patterned" tags="" position="2006,318" size="100,100">An unassuming object in the pile. The //murello// you own is decorated, the cylindrical wooden block has been covered in its entirety in a decorative paper. It&#39;s a design you favor, (if:$murelloDesign contains &quot;contemporary&quot;)[(text-colour:orange)[$murelloDesign]](if:$murelloDesign contains &quot;flower&quot;)[(text-colour:#40c057)[$murelloDesign]](if:$murelloDesign contains &quot;dots&quot;)[(text-colour:#be4bdb)[$murelloDesign]](if:$murelloDesign contains &quot;traditional&quot;)[(text-colour:blue)[$murelloDesign]] that wraps around the wooden and covers the entire surface. 
 
-It sits [[upon the tabletop]] with the rest of your supplies.</tw-passagedata><tw-passagedata pid="13" name="Start" tags="" position="1298,198" size="100,100">#Merletto and Me
+It sits [[upon the tabletop]] with the rest of your supplies.</tw-passagedata><tw-passagedata pid="13" name="Start" tags="" position="1298,198" size="100,100">#Merletto and Me (if:visits is 0)[(set: $finishedthegame to false)]
 //A Game About Making Traditional Burano Needle-Lace//
 
 [[To play the game in English, click here.|Play Instructions]]
 
 
+(if:$finishedthegame is true)[Thanks for playing! Consider (print: &#39;&lt;a href=&quot;https://forms.gle/XppdD9H9twZnEkj1A&quot; target=&quot;_blank&quot;&gt; taking a quick survey!&lt;/a&gt;
 
-[[Credits | Credits]]
-
-[[About this Game | About The Game]]</tw-passagedata><tw-passagedata pid="14" name=" Credits" tags="" position="1703,205" size="100,100">Thank you to Professor Riccardo Fassone and Professor Giaime Alonge for their supervision and expertise during this project.  
+&#39;)][[Credits | Credits]]
+[[About this Game | About The Game]]</tw-passagedata><tw-passagedata pid="14" name=" Credits" tags="" position="1723,105" size="100,100">Thank you to Professor Riccardo Fassone and Professor Giaime Alonge for their supervision and expertise during this project.  
 
 Thank you to my family for their unconditional support. 
 
@@ -115,13 +115,9 @@ Grazie a Professore Riccardo Fassone e Professore Giaime Alonge per il loro supe
 
 Grazie a mia famiglie per il loro sostegno incondizionato.
 
-[[Return to the Title Screen |Start]]</tw-passagedata><tw-passagedata pid="15" name=" About The Game" tags="" position="1846,207" size="100,100">(dialog:&quot;The links to further reading and to play other games currently are both placeholders&quot;)
+[[Return to the Title Screen |Start]]</tw-passagedata><tw-passagedata pid="15" name=" About The Game" tags="" position="1662,233" size="100,100">This game is an interactive fiction game about making lace!
 
-This game is a 
-
-(print: &#39;&lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot;&gt;For further reading, click here!&lt;/a&gt;&#39;)
-
-To play the other two games in the series,(print: &#39;&lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot;&gt; click here!&lt;/a&gt;&#39;)
+To play the other two games in the anthology series, you can check them out on (print: &#39;&lt;a href=&quot;https://itch.io/blog/1446938/an-anthology-of-lacemaking-games&quot; target=&quot;_blank&quot;&gt; itch.io&lt;/a&gt;&#39;), or (print: &#39;&lt;a href=&quot;http://makes-games.com&quot; target=&quot;_blank&quot;&gt;visit the website Makes Games&lt;/a&gt;&#39;)!
 
 [[Return to the Title Screen |Start]]</tw-passagedata><tw-passagedata pid="16" name="begin working on your project" tags="" position="2087,623" size="100,100">With a brand new project, there is always some setup at the very start before you can settle in to work. First, you (link-reveal:&quot;pull up a footstool.&quot;)[= Then you (link-reveal:&quot;settle into your chair.&quot;)[=
 
@@ -143,7 +139,7 @@ You&#39;d decided on this pattern a while ago, because (text-colour:#862e9c)[(if
 
 The artisans make it look much more (t8n:&quot;instant&quot;)+(link:&quot;effortless than it really is.&quot;)[effortless than it really is. Your $whoTaughtYou makes [[lace|this craft]] just as effortless as the glassmaking looks for these artisans.]</tw-passagedata><tw-passagedata pid="24" name="an index of the types of stitches" tags="" position="1446,955" size="100,100">You&#39;ve learned a number of different stitches over time for your lace work. Each of them looks differently when used in a larger piece, leaving different textures and fill amounts. 
 
-You know the //(cycling-link:&quot;sacola ciara&quot;,&quot;fisso&quot;,&quot;Greco&quot;,&quot;Greco da due&quot;,&quot;Greco da tre&quot;,&quot;Greco Redin&quot;,&quot;Tondo&quot;,&quot;Fisso Tondo&quot;,&quot;Formigola&quot;,&quot;Creme Falae o da sette&quot;,&quot;Creme da Tredese&quot;,&quot;Sbari con votevi&quot;,&quot;Sbari con rincele &quot;,&quot;Panetti&quot;,&quot;Rosette&quot;,&quot;Votevi&quot;,&quot;Votevi con pico&quot;,&quot;Rosette&quot;, &quot;Sbari&quot;,&quot;Rosellina&quot;,&quot;Stelette da quatro&quot;,&quot;Occetti de Colombo &quot;,&quot;Smerli&quot;,&quot;Smerli a gruppi&quot;,&quot;smerli a stella con cinque punte&quot;,&quot;Pico&quot;,&quot;Sbari a riga&quot;,&quot;Redin&quot;,&quot;Rete&quot;,&quot;Rete con creme&quot;,&quot;Rete macà&quot;,&quot;bissoni&quot;,&quot;rilievo&quot;,&quot;cappa&quot;,&quot;Chiusura&quot;)// stitch. This stitch is known for 
+You know the //(cycling-link:&quot;sacola ciara&quot;,&quot;fisso&quot;,&quot;Greco&quot;,&quot;Greco da due&quot;,&quot;Greco da tre&quot;,&quot;Greco Redin&quot;,&quot;Tondo&quot;,&quot;Fisso Tondo&quot;,&quot;Formigola&quot;,&quot;Creme Falae o da sette&quot;,&quot;Creme da Tredese&quot;,&quot;Sbari con votevi&quot;,&quot;Sbari con rincele &quot;,&quot;Panetti&quot;,&quot;Rosette&quot;,&quot;Votevi&quot;,&quot;Votevi con pico&quot;,&quot;Rosette&quot;, &quot;Sbari&quot;,&quot;Rosellina&quot;,&quot;Stelette da quatro&quot;,&quot;Occetti de Colombo &quot;,&quot;Smerli&quot;,&quot;Smerli a gruppi&quot;,&quot;smerli a stella con cinque punte&quot;,&quot;Pico&quot;,&quot;Sbari a riga&quot;,&quot;Redin&quot;,&quot;Rete&quot;,&quot;Rete con creme&quot;,&quot;Rete macà&quot;,&quot;bissoni&quot;,&quot;rilievo&quot;,&quot;cappa&quot;,&quot;Chiusura&quot;)// stitch. 
 
 All of these are important to learn so you can make different patterns of [[lace|this craft]], though you&#39;ve found some stitches more difficult that others. But, this will get easier will practice, so you hope. </tw-passagedata><tw-passagedata pid="25" name="pick up pattern first" tags="" position="2302,857" size="100,100">First you pick up your $lacePattern pattern, smoothing out any little creases to the paper, and (cycling-link:&quot;double&quot;,&quot;triple&quot;,&quot;quadruple&quot;,&quot;quintuple&quot;) checking over the pencil lines. 
 
@@ -237,7 +233,7 @@ Greco da tre&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</tw-passagedata><tw-passagedata pid="56" name="Untitled Passage" tags="" position="3996,999" size="100,100">It&#39;s not yet a finished piece of lace; for that, you&#39;ll still need some more time in the days to come. 
 
-But for today, it&#39;s time to give your hands a [[rest.-&gt;rest]]</tw-passagedata><tw-passagedata pid="57" name="rest" tags="" position="3999,1149" size="100,100">You rest.
+But for today, it&#39;s time to give your hands a [[rest.-&gt;rest]]</tw-passagedata><tw-passagedata pid="57" name="rest" tags="" position="3999,1149" size="100,100">You rest.(set: $finishedthegame to true)
 (after:2000)[ (transition:&quot;Fade&quot;)[Goodnight Burano.] ]
 (after:4000)[(transition:&quot;Fade&quot;)[And goodnight to //you// too.]]
 (after:10000, 5000)[(goto: &#39;Start&#39;)]</tw-passagedata></tw-storydata>
